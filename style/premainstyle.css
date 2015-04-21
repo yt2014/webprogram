@@ -1,0 +1,124 @@
+body
+{
+    background-color:black;
+}
+
+div
+{
+width:100%;
+height:400px;
+
+/*text-shadow: 0px 0px 8px purple;*/
+}
+
+div #p1
+{
+    width:100%;
+    text-align:center;
+    margin-top:300px;
+    -webkit-animation: becomeclear 1.5s  ease-in-out;
+    animation: becomeclear 1.5s  ease-in-out;
+    text-shadow: 0px 0px 0px purple;
+    color:red;
+    font-size:40px;
+}
+
+@-webkit-keyframes becomeclear {
+   0% {  color: transparent; text-shadow: 0px 0px 8px red;}
+ /* 25% { color: transparent;text-shadow: 0px 0px 6px red; }*/
+  50% { color: transparent;text-shadow: 0px 0px 4px red; }
+ /* 75% { color: transparent;text-shadow: 0px 0px 2px red; }*/
+  100% { color: transparent;text-shadow: 0px 0px 0px red; }
+}
+ 
+@keyframes becomeclear {
+    0% { color: transparent; text-shadow: 0px 0px 8px purple;}
+ /*  25% {color: transparent; text-shadow: 0px 0px 6px purple; }*/
+  50% {color: transparent; text-shadow: 0px 0px 4px purple; }
+ /* 75% {color: transparent; text-shadow: 0px 0px 2px purple; }*/
+  100% {color: transparent; text-shadow: 0px 0px 0px purple; }
+}
+
+div #p2
+{    
+    width:100%;
+    text-align:center;
+    color:white;
+
+   -webkit-animation: comein 2.5s  ease-in-out;
+    animation: comein 2.5s  ease-in-out;
+
+}
+
+@-webkit-keyframes comein {
+   0% { color:black; }
+ /* 25% { color: transparent;text-shadow: 0px 0px 6px red; }*/
+  80% { color:black; }
+ /* 75% { color: transparent;text-shadow: 0px 0px 2px red; }*/
+  100% { color:white; }
+}
+ 
+@keyframes comein {
+       0% { color:black; }
+ /* 25% { color: transparent;text-shadow: 0px 0px 6px red; }*/
+  80% { color:black; }
+ /* 75% { color: transparent;text-shadow: 0px 0px 2px red; }*/
+  100% { color:white; }
+
+}
+
+
+div #p3
+{    
+    width:100%;
+    text-align:center;
+}
+
+div #p3 a
+{
+    margin-top:30px;
+    padding:8px; 
+    letter-spacing:2px;
+
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:10px;
+     /*width:100px;*/
+     background-color:red;
+     color:white;
+     text-decoration:none;
+
+    -webkit-animation: comeinenter 3s  ease-in-out;
+    animation: comeinenter 3s  ease-in-out;
+}
+
+div #p3 a:hover
+{
+    background-color:#00DDDD;
+}
+
+
+@-webkit-keyframes comeinenter  {
+   0% { background-color:black; color:black;}
+ /* 25% { color: transparent;text-shadow: 0px 0px 6px red; }*/
+  80% { background-color:black; color:black; }
+ /* 75% { color: transparent;text-shadow: 0px 0px 2px red; }*/
+  100% { background-color:red; color:white; }
+}
+ 
+@keyframes comeinenter  {
+       0% { background-color:black; color:black; }
+ /* 25% { color: transparent;text-shadow: 0px 0px 6px red; }*/
+  80% { background-color:black color:black; }
+ /* 75% { color: transparent;text-shadow: 0px 0px 2px red; }*/
+  100% { background-color:red; color:white; }
+
+}
+
+
+
+
+
+
+
+
+
