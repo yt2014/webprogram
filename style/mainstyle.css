@@ -14,6 +14,11 @@ body
    height:600px;
 }
 
+#aboutus:hover
+{
+   color:red;
+}
+
 .english_charactor
 {
     margin-top:0px;
@@ -22,6 +27,7 @@ body
     padding-bottom:0px;
     font-size:20px;
     font-weight:900;
+    /*color:red;*/
     
 }
 
@@ -36,23 +42,26 @@ body
 
 .icon_image
 {
-    position:relative;
+    
 }
 
 .icon_image:hover
 {
-    position:relative;border:none;z-index:1000;
+    /*position:relative;*/
+    border:none;z-index:1000;
 }
 
 .icon_image:hover #aboutus_img
 {
-   position:  absolute;left:-2px;top:-10px;width:80px;height:80px;padding:5px;border:0px solid #000;z-index:1000;
+   /*position:absolute;*/
+   left:-5px;top:-5px;width:70px;height:70px;padding:5px;border:0px solid #000;z-index:1000;
 }
+
 
 
 #aboutus_img
 {
-   width:64px;height:64px;border:none;position:absolute;  
+   width:64px;height:64px;border:none;  
 }
 
 
