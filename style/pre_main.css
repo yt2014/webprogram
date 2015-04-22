@@ -1,0 +1,137 @@
+body
+{
+    background-color:black;
+}
+
+div
+{
+width:100%;
+height:300px;
+
+/*text-shadow: 0px 0px 8px purple;*/
+}
+
+div #p1
+{
+   
+}
+
+
+div #p2
+{    
+    width:100%;
+    text-align:center;
+    color:white;
+   /* display:none;*/
+   
+}
+
+
+div #p3
+{    
+    width:100%;
+    text-align:center;
+   /* display:none;*/
+}
+
+div #p3 a
+{
+    margin-top:30px;
+    padding:8px; 
+    letter-spacing:2px;
+
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:10px;
+     /*width:100px;*/
+     background-color:red;
+     color:white;
+     text-decoration:none;
+}
+
+div #p3 a:hover
+{
+    background-color:#00DDDD;
+}
+
+
+
+.p1_0
+{    
+    width:100%;
+    text-align:center;
+    margin-top:200px;
+    text-shadow: 0px 0px 8px purple;
+    color:red;
+    font-size:40px;
+    -webkit-filter:blur(3px);
+    -ms-filter:blur(3px);
+     filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='3', MakeShadow='true', ShadowOpacity='0.25');
+   /* display:none;*/
+}
+
+.p1_1
+{
+   width:100%;
+    text-align:center;
+    margin-top:200px;
+    /*text-shadow: 0px 0px 6px purple;*/
+    color:red;
+    font-size:40px;
+    -webkit-filter:blur(2px);
+    -ms-filter:blur(2px);
+    filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='2', MakeShadow='true', ShadowOpacity='0.5');
+
+  /* color:white;*/   
+}
+
+
+.p1_2
+{
+    width:100%;
+    text-align:center;
+    margin-top:200px;
+    text-shadow: 0px 0px 3px purple;
+    color:red;
+    font-size:40px;
+    -webkit-filter:blur(1px);
+    -ms-filter:blur(1px);
+
+    filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='1', MakeShadow='true', ShadowOpacity='0.75');
+
+
+  /* color:blue;*/   
+}
+
+.p1_3
+{
+    width:100%;
+    text-align:center;
+    margin-top:200px;
+   /* text-shadow: 0px 0px 8px purple;*/
+    color:red;
+    font-size:40px;
+
+   /* -webkit-filter:blur(3px);*/
+   /* color:red;*/
+}
+
+.p1_4
+{
+   width:100%;
+    text-align:center;
+    margin-top:200px;
+    /*text-shadow: 0px 0px 6px purple;*/
+    color:red;
+    font-size:40px;
+    -webkit-filter:blur(1.5px);
+    -ms-filter:blur(1.5px);
+    filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='1.5', MakeShadow='true', ShadowOpacity='0.75');
+
+}
+
+
+
+
+
+
+

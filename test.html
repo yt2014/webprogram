@@ -1,0 +1,68 @@
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+    <title>JS实现文字动感模糊切换效果丨芯晴网页特效丨CsrCode.CN</title>
+    </head>
+    <body>
+    <script>
+    <!-- Beginning of JavaScript -
+    //改变字体的大小
+    var thissize=20
+    var textfont="Verdana"
+    //改变字体的颜色
+    var textcolor= new Array()
+    textcolor[0]="EEEEEE"
+    textcolor[1]="DDDDDD"
+    textcolor[2]="CCCCCC"
+    textcolor[3]="AAAAAA"
+    textcolor[4]="888888"
+    textcolor[5]="666666"
+    textcolor[6]="555555"
+    textcolor[7]="444444"
+    textcolor[8]="333333"
+    textcolor[9]="222222"
+    textcolor[10]="111111"
+    textcolor[11]="000000"
+    //改变文字的内容
+    var message = new Array()
+    message[0]="欢迎光临芯晴网页特效"
+    message[1]="http://www.CsrCode.cn"
+    message[2]="希望你喜欢这种模式"
+    message[3]="再次感谢你的光临"
+    var i_blurstrength=20
+    var i_message=0
+    var i_textcolor=0
+    function blurtext() {
+    if(document.all) {
+    if (i_blurstrength >=-2) {
+    if (i_textcolor >=textcolor.length-1) {i_textcolor=textcolor.length-1}
+    blurthis.innerHTML="<span id='blurpit1' style='position:absolute;visibility:visible;width:600px; top:5px;left:5px;filter:blur(add=0,strength="+i_blurstrength+",direction=90);font-family:"+textfont+";font-size:"+thissize+"pt;color:"+textcolor[i_textcolor]+"'>"+message[i_message]+"</span>";
+    document.close()
+    i_blurstrength=i_blurstrength-2
+    i_textcolor++
+    var timer=setTimeout("blurtext()",50)
+    }
+    else {
+    if (i_textcolor >=textcolor.length-1) {i_textcolor=textcolor.length-1}
+    blurthis.innerHTML="<span id='blurit1' style='position:absolute;visibility:visible;width:600px; top:5px;left:5px;filter:blendTrans(duration=4.2);font-family:"+textfont+";font-size:"+thissize+"pt;color:FF0000'>"+message[i_message]+"</span>";
+    i_message++
+    if (i_message>=message.length){i_message=0}
+    i_blurstrength=20
+    i_textcolor=0
+    clearTimeout(timer)
+    var timer=setTimeout("blurtext()",2000)
+    }
+    }
+    }
+    window.onload=blurtext
+    // - End of JavaScript - -->
+    </script>
+    <div id=mainbod
+    style="LEFT: 10px; VISIBILITY: visible; POSITION: absolute; TOP: 180px"></div>
+    <div id=blurthis
+    style="VISIBILITY: visible; POSITION: absolute"></div>
+    </body>
+    </html>
+    <br><br><hr><p align="center"><font color=black>本特效由 <a href="http://www.CsrCode.cn" target="_blank">芯晴网页特效</a>丨CsrCode.Cn 收集于互联网，只为兴趣与学习交流，不作商业用途。</font></p>
+    
+
