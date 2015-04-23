@@ -1,29 +1,36 @@
 body
 {
     background-color:black;
-    height:500px;
+    height:auto;
+    width:auto;
+    vertical-align:middle;
+
 }
 
 
 #divmain
 {
    background-image:url(../pictures/bgimage_main.jpg);
-   margin-top:15px;
-   margin-left:10%;
+   margin-top:8%;
+   margin-bottom:auto;
+   margin-left:auto;
+   margin-right:auto;
    text-align:center;
-   width:80%;
-   height:500px;
-   position:fixed;
+   vertical-align:middle;
+   width:900px;
+   height:600px;
+   position:relative;
 }
 
 #aboutus
 {
    width:100px;
    height:100px;
-   left:10%;
-   top:72%;
+   left:0px;
+   top:420px;
    position:relative;
-   text-align:center;
+   //text-align:center;
+   
 }
 
 #aboutus:hover
@@ -39,7 +46,6 @@ body
     padding-bottom:0px;
     font-size:20px;
     font-weight:900;
-    text-align:center;
     /*color:red;*/
     
 }
@@ -47,11 +53,10 @@ body
 .Chinese_Charactor
 {
     margin-top:0px;
-    margin-bottom:0px;
+    margin-bottom:5px;
     padding-top:0px;
-    padding-bottom:5px;
+    padding-bottom:0px;
     font-weight:900;
-    text-align:center;
 }
 
 .icon_image
@@ -91,10 +96,11 @@ body
 {
    width:100px;
    height:100px;
-   left:31%;
-   top:-18%;
+   left:200px;
+   top:-80px;
    position:relative;
-   text-align:center;
+   
+ 
 }
 
 #caseshow:hover
@@ -106,10 +112,11 @@ body
 {
    width:100px;
    height:100px;
-   left:60%;
-   top:22%;
-   position:fixed;
-   text-align:center;
+   left:550px;
+   top:-120px;
+   position:relative;
+   //text-align:center;
+  
 }
 
 #designer:hover
@@ -119,12 +126,14 @@ body
 
 #service
 {
-   width:100px;
+  width:100px;
    height:100px;
-   left:50%;
-   top:62%;
-   position:fixed;
-   text-align:center;
+   left:500px;
+   top:100px;
+   position:relative;
+ //  text-align:center;
+ 
+
 }
 
 #service:hover
@@ -134,12 +143,14 @@ body
 
 #hr
 {
-   width:100px;
+  width:100px;
    height:100px;
-   left:75%;
-   top:42%;
-   position:fixed;
+    left:750px;
+   top:-150px;
+   position:relative;
    text-align:center;
+
+
 }
 
 #hr:hover
@@ -148,25 +159,49 @@ body
 }
 #line1
 {
-    width:272px;
+    width:320px;
     height:0px;
-    top:7%;
-    left:12%;
+    top:-240px;
+    left:0px;
     position:relative;
-    transform: rotate(-50deg);
+    transform: rotate(-58deg);
+
     
 }
 
 #line2
 {
-    width:246px;
+    width:270px;
     height:0px;
-    top:26%;
-    left:42%;
+    top:-390px;
+    left:285px;
     position:relative;
-    transform: rotate(15deg);
+    transform: rotate(10deg);
     
 }
+
+#line3
+{
+    width:225px;
+    height:0px;
+    top:-235px;
+    left:450px;
+    position:relative;
+    transform: rotate(-80deg);
+    
+}
+
+#line4
+{
+    width:200px;
+    height:0px;
+    top:-160px;
+    left:570px;
+    position:relative;
+    transform: rotate(-30deg);
+    
+}
+
 
 hr
 {

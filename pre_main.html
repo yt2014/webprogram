@@ -8,15 +8,20 @@
      <script Language="JavaScript" src="js/premain.js">
      </script>
      <script>
-$(document).ready(function(){
-  $("p1").animate({
-   /* left:'250px',
-    opacity:'0.5',
-    height:'150px',
-    width:'150px',*/
-    filter:blur(0px)
-  },1000);
-});
+	 $(document).ready(
+	 function(){
+                     $("#p1").fadeIn(1000,p2fadein);
+		 }
+		 );
+
+       function p2fadein()
+       {
+          $("#p2").fadeIn(500,p3fadein);
+       }
+       function p3fadein()
+       {
+          $("#p3").fadeIn(500);
+       }
  </script>
           
 </head>
