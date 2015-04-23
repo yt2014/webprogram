@@ -3,7 +3,7 @@ body
     background-color:black;
     height:auto;
     width:auto;
-    vertical-align:middle;
+    //vertical-align:middle;
 
 }
 
@@ -11,14 +11,14 @@ body
 #divmain
 {
    background-image:url(../pictures/bgimage_main.jpg);
-   margin-top:8%;
-   margin-bottom:auto;
+   margin-top:5%;
+   margin-bottom:0px;
    margin-left:auto;
    margin-right:auto;
-   text-align:center;
+   text-align:left;
    vertical-align:middle;
    width:900px;
-   height:600px;
+   height:550px;
    position:relative;
 }
 
@@ -26,10 +26,10 @@ body
 {
    width:100px;
    height:100px;
-   left:0px;
-   top:420px;
+   left:5px;
+   top:410px;
    position:relative;
-   //text-align:center;
+   text-align:center;
    
 }
 
@@ -62,7 +62,7 @@ body
 .icon_image
 {
    text-align:center; 
-   border:1px;
+   border:none;
    
 }
 
@@ -99,7 +99,7 @@ body
    left:200px;
    top:-80px;
    position:relative;
-   
+   text-align:center;
  
 }
 
@@ -115,7 +115,7 @@ body
    left:550px;
    top:-120px;
    position:relative;
-   //text-align:center;
+   text-align:center;
   
 }
 
@@ -131,7 +131,7 @@ body
    left:500px;
    top:100px;
    position:relative;
- //  text-align:center;
+   text-align:center;
  
 
 }
@@ -165,7 +165,9 @@ body
     left:0px;
     position:relative;
     transform: rotate(-58deg);
-
+    -ms-transform:rotate(-58deg);
+    text-align:center;
+    color:white;
     
 }
 
@@ -177,6 +179,7 @@ body
     left:285px;
     position:relative;
     transform: rotate(10deg);
+    -ms-transform:rotate(10deg);
     
 }
 
@@ -188,6 +191,7 @@ body
     left:453px;
     position:relative;
     transform: rotate(-80deg);
+    -ms-transform:rotate(-80deg);
     
 }
 
@@ -199,6 +203,9 @@ body
     left:570px;
     position:relative;
     transform: rotate(-30deg);
+    -ms-transform:rotate(-30deg);
+
+//filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.7660444431189777, M12=-0.6427876096865394, M21=0.6427876096865398, M22=0.7660444431189779);   
     
 }
 
@@ -206,9 +213,43 @@ body
 hr
 {
 	border:1px dashed;
+	color:black;
 }
 
+#divfoot
+{
+   margin-top:0px;
+   padding-top:0px;
+   color:white;
+   width:900px;
+   text-align:left;
+   margin-left:auto;
+   margin-right:auto;
+   vertical-align:middle;
+}
 
+#logo
+{
+   width:300px;
+   float:left;
+}
 
+#address
+{
+  width:300px;
+  margin-left:0px;
+  padding-left:0px;
+  float:left;
+}
 
+#phone
+{
+  width:100px;
+  float:right;
+  margin-right:0px;
+}
+/*#recordgov
+{
+   float:right;
+}*/
 
