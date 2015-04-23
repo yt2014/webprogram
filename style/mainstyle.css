@@ -57,13 +57,16 @@ body
 .icon_image
 {
    text-align:center; 
+   border:1px;
+   
 }
 
 .icon_image:hover
 {
     /*position:relative;*/
 	
-    border:none;z-index:1000;
+    //border:none;
+    z-index:1000;
 }
 
 .icon_image:hover .actual_img
@@ -79,7 +82,8 @@ body
 .actual_img
 {
    width:64px;height:64px;
-   border-radius:30px;  
+   border-radius:30px;
+   border-color:0x00;  
 }
 
 
@@ -142,4 +146,34 @@ body
 {
    color:red;
 }
+#line1
+{
+    width:278px;
+    height:0px;
+    top:45%;
+    left:19%;
+    position:fixed;
+    transform: rotate(-48deg);
+    
+}
+
+#line2
+{
+    width:250px;
+    height:0px;
+    top:30%;
+    left:42%;
+    position:fixed;
+    transform: rotate(15deg);
+    
+}
+
+hr
+{
+	border:1px dashed;
+}
+
+
+
+
 
