@@ -36,12 +36,12 @@ function hrfadein()
 
 function line1fadein()
 {
-         $("#line1").fadeIn(500,line2fadein); 
+         $("#svg_line1").fadeIn(500,line2fadein); 
 }
 
 function line2fadein()
 {
-         $("#line2").fadeIn(500,line3fadein); 
+         $("#svg_line2").fadeIn(500,line3fadein); 
 }
 
 function line3fadein()
@@ -87,7 +87,7 @@ function line4fadein()
 	      <p class="Chinese_Charactor">人力资源</p>
              <a href="hr.html" class="icon_image"><img src="pictures/hr_64.ico" class="actual_img"/></a>
        </div>
-       <div id="line1">
+      <!-- <div id="line1">
 	       <hr/>
        </div> 
        <div id="line2">
@@ -99,7 +99,20 @@ function line4fadein()
        </div>
        <div id="line4">
 	       <hr/>
-       </div>
+	   </div>-->
+<svg xmlns="http://www.w3.org/2000/svg" id="svg_line1">
+<line x1="0" y1="285" x2="180" y2="0" stroke-width="2"
+stoke_height="400"
+    stroke="black" /> <!-- transform="rotate(42 500 100)"-->
+    </svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" id="svg_line2">
+<line x1="0" y1="0" x2="284" y2="65" stroke-width="2"
+stoke_height="400"
+    stroke="black" /> <!-- transform="rotate(42 500 100)"-->
+    </svg>
+
+	  
        <div id="center_part">
 	       <a href="aboutus.html" class="link_aboutus">
 	       <p id="context_center"><br/>最基础的，最初的阶段<br/>
@@ -115,7 +128,7 @@ function line4fadein()
 	          +策划Strategy
 	         </p>
 	    </a>
-       </div>
+	</div>
    </div>
    <div id="divfoot">
 	   <p id="logo">80ElementDesign<br/>80元素装饰设计</p>

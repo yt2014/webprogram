@@ -347,3 +347,33 @@ hr
     text-align:right;
     
 }
+
+
+#svg_line1
+{
+   // color:red;
+    position:relative;
+    left:60px;
+    top:-370px;
+    //background-color:blue;
+    width:180px;
+    height:285px;
+    margin:0px;
+    padding:0px;
+    display:none;
+
+}
+#svg_line2
+{
+    //color:red;
+    position:relative;
+    left:93px;
+    top:-623px;
+    //background-color:blue;
+    width:284px;
+    height:65px;
+    margin:0px;
+    padding:0px;
+    display:none;
+
+}
