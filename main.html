@@ -5,8 +5,57 @@
     <title>80元素装修设计</title>
     <script Language="JavaScript" src="js/main.js">
     </script>
+    <script Language="JavaScript" src="js/jquery-1.11.2.min.js">
+     </script>
+     <script Language="JavaScript" src="js/main.js">
+     </script>
+     <script>
+        $(document).ready(
+	 function(){
+                     $("#aboutus").fadeIn(500,p2fadein);
+		 }
+		 );
+
+function p2fadein()
+{
+          $("#caseshow").fadeIn(500,p3fadein);
+}
+function p3fadein()
+{
+          $("#designer").fadeIn(500,servicefadein);
+}
+function servicefadein()
+{
+         $("#service").fadeIn(500,hrfadein);       
+}
+
+function hrfadein()
+{
+         $("#hr").fadeIn(500,line1fadein); 
+}
+
+function line1fadein()
+{
+         $("#line1").fadeIn(500,line2fadein); 
+}
+
+function line2fadein()
+{
+         $("#line2").fadeIn(500,line3fadein); 
+}
+
+function line3fadein()
+{
+         $("#line3").fadeIn(500,line4fadein); 
+}
+
+function line4fadein()
+{
+         $("#line4").fadeIn(500); 
+}
+     </script>
 </head>
-<body onload = "rotatelines()">
+<body > <!--onload = "rotatelines()"-->
     <div id="divmain">
 	<!--	<p><img src = "pictures/bgimage_main.jpg"/></p> -->
 	<div id="aboutus">
@@ -50,6 +99,22 @@
        </div>
        <div id="line4">
 	       <hr/>
+       </div>
+       <div id="center_part">
+	       <a href="aboutus.html" class="link_aboutus">
+	       <p id="context_center"><br/>最基础的，最初的阶段<br/>
+	         一心一意<br/>
+	         永恒的，唯一的<br/>
+	         专业，专注，跨越百分百<hr id="line_center"/>
+		 </p>
+		 </a>
+       </div>
+       <div id="center_part1">
+            <a href="aboutus.html" class="link_aboutus">
+	       <p id="context_center1">设计 Design<br/>
+	          +策划Strategy
+	         </p>
+	    </a>
        </div>
    </div>
    <div id="divfoot">
