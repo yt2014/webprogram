@@ -51,9 +51,13 @@ function line3fadein()
 
 function line4fadein()
 {
-         $("#svg_line4").fadeIn(500); 
+         $("#svg_line4").fadeIn(500, polygonfadein); 
 }
-     </script>
+function polygonfadein()
+{
+  $("#svg_polygon").fadeIn(200);
+}    
+</script>
 </head>
 <body > <!--onload = "rotatelines()"-->
     <div id="divmain">
