@@ -4,26 +4,52 @@
     <link href="style/mainstyle.css" rel="stylesheet" type="text/css"></link>
     <link href="style/aboutusstyle.css" rel="stylesheet" type = "text/css"></link>
     <title>关于我们</title>
-    <script Language="JavaScript" src="js/main.js">
-    </script>
     <script Language="JavaScript" src="js/jquery-1.11.2.min.js">
      </script>
      <script Language="JavaScript" src="js/main.js">
      </script>
-     <script>
+     <script type="text/javascript">
+          function ChangeAUContent()
+          {
+		  var event_get = event||window.event;
+		  var src_id = event_get.srcElement.id;
+
+		  if(src_id=="label_au_p")
+		  {
+		      document.getElementById("news_content").style.display = "none";
+		     document.getElementById("aboutus_content").style.display = "";
+		    // alert("display aboutus");
+		  }
+		  else if(src_id=="label_au_news")
+		  {
+                      document.getElementById("aboutus_content").style.display = "none";
+		      document.getElementById("news_content").style.display = "";		     
+		      // alert("display news");
+		  }
+                  else
+		  { 
+		     alert(event_get.srcElement.id);
+		  }
+          }
+function init_display()
+{
+	document.getElementById("news_content").style.display = "none";
+        document.getElementById("aboutus_content").style.display = "";
+
+}
      </script>
 </head>
-<body > <!--onload = "rotatelines()"-->
+<body onload="init_display()"> <!--onload = "rotatelines()"-->
     <div id="divmain">	    
 	    <div id="left_total">
 	         <div class="div_top">		    
 			 <h1 id="title_au_en">About Us</h1>
 				 关于我们&nbsp &nbsp &nbsp &nbsp &nbsp<br/>
 		          <div id="aboutus_label">
-				  <a id="au_label_a" href=#> <p id="label_au_p">关于我们</p></a>
+				  <a id="au_label_a" href=# onclick="ChangeAUContent();"> <p id="label_au_p">关于我们</p></a>
 			  </div>
 			  <div id="news_label">
-				  <a id="au_label_news" href=#> <p id="label_au_news">新闻动态</p></a>
+				  <a id="au_label_news" href=# onclick="ChangeAUContent();"> <p id="label_au_news">新闻动态</p></a>
 			  </div>
 			  <hr id="au_line1"/>
 			  <hr id="au_line2"/>
@@ -38,18 +64,19 @@
                      		       
 		</div>
 	        <div id="div_right">
-			<p>我们追随超越我们的直觉，我们相信超越恒久的设计<br/>
-			We follow our intuition, we believe in lasting design.
-			</p>
-			<div id="context_au_right">
-			    <p>
-			    <h3>我们的目标是:</h3>
-			aaaa<br/>
-			aaaa<br/>
-                        aaaa<br/>
-			aaaa<br/>
-			aaaa<br/>
-			aaaa<br/>
+			<div id="aboutus_content">
+			    <p>我们追随超越我们的直觉，我们相信超越恒久的设计<br/>
+			       We follow our intuition, we believe in lasting design.
+			    </p>
+			     <div id="context_au_right">
+			        <p>
+			            <h3>我们的目标是:</h3>
+			                aaaa<br/>
+			                aaaa<br/>
+                                        aaaa<br/>
+			                aaaa<br/>
+			                aaaa<br/>
+			                aaaa<br/>
 			aaaa<br/>
 			aaaa<br/>
 			aaaa<br/>
@@ -67,9 +94,17 @@
 			aaaa<br/>
 			aaaa<br/>
 			aaaa<br/>
-			aaaa<br/>
-			
+			aaaa<br/>			
 			</p>
+			</div>			
+		   </div>
+		   <div id = "news_content">
+				<ul>
+					<li>
+					<a href=#>公司成立</a>                           2015-5-5
+					<li>
+				</ul>
+				afsafdgfgfhgfg
 			</div>
 	        </div>
 	    </div>
