@@ -171,7 +171,9 @@ function(){
 	              pictureArrayIndex =  find_id_index(event.target.id);
 	              //alert("array index " + pictureArrayIndex);
                       $("#displayPictures").css("background","url("+picturesArray[pictureArrayIndex][0]+")");
-		     // alert(picturesArray[pictureArrayIndex][0]);
+		     // alert(pictureArrayIndex);
+		     $("#displayPictures p").text(text_display[0]);
+
 	            }
 		             );
 
@@ -180,7 +182,8 @@ function(){
 		      //alert("click " + event.target);
 		      event.preventDefault();
 		      $("#displayPictures").css("display","none");
-		      
+		      pictureArrayIndex=0;
+		      $("#displayPictures p").text(text_display[0]);
 	            }
 		             );
 
