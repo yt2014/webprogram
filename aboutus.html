@@ -9,10 +9,10 @@
      <script Language="JavaScript" src="js/main.js">
      </script>
      <script type="text/javascript">
-          function ChangeAUContent()
+          function ChangeAUContent(event)
           {
 		  var event_get = event||window.event;
-		  var src_id = event_get.srcElement.id;
+		  var src_id = event_get.target.id;
 
 		  if(src_id=="label_au_p")
 		  {
@@ -46,10 +46,10 @@ function init_display()
 			 <h1 id="title_au_en">About Us</h1>
 				 关于我们&nbsp &nbsp &nbsp &nbsp &nbsp<br/>
 		          <div id="aboutus_label">
-				  <a id="au_label_a" href=# onclick="ChangeAUContent();"> <p id="label_au_p">关于我们</p></a>
+				  <a id="au_label_a" href=# onclick="ChangeAUContent(event);"> <p id="label_au_p">关于我们</p></a>
 			  </div>
 			  <div id="news_label">
-				  <a id="au_label_news" href=# onclick="ChangeAUContent();"> <p id="label_au_news">新闻动态</p></a>
+				  <a id="au_label_news" href=# onclick="ChangeAUContent(event);"> <p id="label_au_news">新闻动态</p></a>
 			  </div>
 		 <svg xmlns="http://www.w3.org/2000/svg" id="svg_line_1">
                     <line x1="350" y1="100" x2="645" y2="100" stroke-width="2"
