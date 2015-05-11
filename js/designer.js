@@ -225,7 +225,7 @@ function(){
 	                 //alert("array index " + pictureArrayIndex);
                          $("#displayPictures").css("background","url("+picturesArray[pictureArrayIndex][0]+")");
 		         // alert(pictureArrayIndex);
-		         $("#displayPictures p").text(text_display[0]);
+		         $("#displayPictures p").text("设计师");
 	             }
 	             else
 		     {
@@ -236,7 +236,7 @@ function(){
 	                 //alert("array index " + pictureArrayIndex);
                          $("#displayPictures").css("background","url("+picturesArray[pictureArrayIndex][0]+")");
 		         // alert(pictureArrayIndex);
-		         $("#displayPictures p").text(text_display[0]);
+		         $("#displayPictures p").text("设计师");
 		     }
 	            }
 		             );
