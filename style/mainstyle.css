@@ -1,6 +1,6 @@
 body
 {
-    background-color:black;
+    background-color:#808080;
     height:auto;
     width:auto;
     //vertical-align:middle;
@@ -10,7 +10,7 @@ body
 
 #divmain
 {
-   background-image:url(../pictures/bgimage_main.jpg);
+   background-color:#F5F5F5;
    margin-top:5%;
    margin-bottom:0px;
    padding-bottom:0px;
@@ -262,7 +262,7 @@ hr
 
 #center_part
 {
-	background-color:#666666;
+	//background-color:red;
 	width:200px;
 	height:115px;
 //	transform:rotate(45deg);
@@ -300,7 +300,7 @@ hr
 
 #center_part1
 {
-	background-color:#666666;
+	background-color:red;
 	width:208px;
 	height:90px;
 //	transform:rotate(45deg);
