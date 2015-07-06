@@ -21,7 +21,7 @@ div #p1
     -webkit-animation: becomeclear 1.5s  ease-in-out;
     animation: becomeclear 1.5s  ease-in-out;
     text-shadow: 0px 0px 0px purple;
-    color:red;
+    color:#B22222;
     font-size:40px;
 }
 
@@ -109,7 +109,7 @@ div #p3 a
     font-family:Arial,Helvetica,sans-serif;
     font-size:10px;
      /*width:100px;*/
-     background-color:red;
+     background-color:#B22222;
      color:white;
      text-decoration:none;
      -moz-animation:comeinenter 3s  ease-in-out;

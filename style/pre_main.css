@@ -43,7 +43,7 @@ div #p3 a
     font-family:Arial,Helvetica,sans-serif;
     font-size:10px;
      /*width:100px;*/
-     background-color:red;
+     background-color:#CC0000;
      color:white;
      text-decoration:none;
 }
@@ -61,7 +61,7 @@ div #p3 a:hover
     text-align:center;
     margin-top:200px;
     text-shadow: 0px 0px 0px purple;
-    color:red;
+    color:#CC0000;
     font-size:40px;
     -webkit-filter:blur(0px);
     -ms-filter:blur(0px);
@@ -76,7 +76,7 @@ div #p3 a:hover
     text-align:center;
     margin-top:200px;
     /*text-shadow: 0px 0px 6px purple;*/
-    color:red;
+    color:#CC0000;
     font-size:40px;
     -webkit-filter:blur(2px);
     -ms-filter:blur(2px);
@@ -109,7 +109,7 @@ div #p3 a:hover
     text-align:center;
     margin-top:200px;
    /* text-shadow: 0px 0px 8px purple;*/
-    color:red;
+    color:#B22222;
     font-size:40px;
 
    /* -webkit-filter:blur(3px);*/
@@ -122,7 +122,7 @@ div #p3 a:hover
     text-align:center;
     margin-top:200px;
     /*text-shadow: 0px 0px 6px purple;*/
-    color:red;
+    color:#B22222;
     font-size:40px;
     -webkit-filter:blur(1.5px);
     -ms-filter:blur(1.5px);
