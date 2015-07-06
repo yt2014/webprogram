@@ -64,6 +64,13 @@ $(document).ready(function(){
                 var li_his = $("<li>历年作品</li>");
                 ul_lh.append(li_his);
                                            });/*end of history work click*/
+
+	gearCircleElement = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+        gearCircleElement.id = 'circle';
+        gearCircleElement.cx.baseVal.value = 34;
+        gearCircleElement.cy.baseVal.value = 43; 
+        gearCircleElement.r.baseVal.value = 12; 
+        gearCircleElement.style.fill = '#ff0000';
                                               
        
 });
