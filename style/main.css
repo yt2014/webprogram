@@ -112,6 +112,8 @@ body
 {
    width:100px;
    height:100px;
+   top:70%;
+   left:5%;
    position:relative;
    text-align:center;
   // display:none;
@@ -128,6 +130,8 @@ body
 {
    width:100px;
    height:100px;
+   left:25%;
+   top:-5%;
    position:relative;
    text-align:center;
   // display:none;
@@ -144,6 +148,8 @@ body
 {
    width:100px;
    height:100px;
+   left:55%;
+   top:-8%;
    position:relative;
    text-align:center;
    //display:none;
@@ -158,8 +164,8 @@ body
 {
   width:100px;
    height:100px;
-   //left:500px;
-   //top:100px;
+   left:47%;
+   top:28%;
    position:relative;
    text-align:center;
    //display:none;
@@ -175,7 +181,7 @@ body
 {
   width:100px;
    height:100px;
-   // left:750px;
+    left:80%;
    //top:-150px;
    position:relative;
    text-align:center;
