@@ -1,140 +1,41 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-type" content="text/html; charset=GB2312" /> 
-    <link href="style/mainstyle.css" rel="stylesheet" type="text/css"></link>
-    <link href="style/aboutusstyle.css" rel="stylesheet" type = "text/css"></link>
-    <title>关于我们</title>
-    <script Language="JavaScript" src="js/jquery-1.11.2.min.js">
-     </script>
-     <script Language="JavaScript" src="js/main.js">
-     </script>
-     <script type="text/javascript">
-          function ChangeAUContent(event)
-          {
-		  var event_get = event||window.event;
-		  var src_id = event_get.target.id;
-
-		  if(src_id=="label_au_p")
-		  {
-		      document.getElementById("news_content").style.display = "none";
-		     document.getElementById("aboutus_content").style.display = "";
-		    // alert("display aboutus");
-		  }
-		  else if(src_id=="label_au_news")
-		  {
-                      document.getElementById("aboutus_content").style.display = "none";
-		      document.getElementById("news_content").style.display = "";		     
-		      // alert("display news");
-		  }
-                  else
-		  { 
-		     alert(event_get.srcElement.id);
-		  }
-          }
-function init_display()
-{
-	document.getElementById("news_content").style.display = "none";
-        document.getElementById("aboutus_content").style.display = "";
-
-}
-     </script>
+<meta charset="GB2312">
+<link rel="stylesheet" type="text/css" href="style/aboutus.css">
+<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="js/aboutus.js"></script>
+<title>80元素装修设计</title>
 </head>
-<body onload="init_display()"> <!--onload = "rotatelines()"-->
-    <div id="divmain">	    
-	    <div id="left_total">
-	         <div class="div_top">		    
-			 <h1 id="title_au_en">About Us</h1>
-				 关于我们&nbsp &nbsp &nbsp &nbsp &nbsp<br/>
-		          <div id="aboutus_label">
-				  <a id="au_label_a" href=# onclick="ChangeAUContent(event);"> <p id="label_au_p">关于我们</p></a>
-			  </div>
-			  <div id="news_label">
-				  <a id="au_label_news" href=# onclick="ChangeAUContent(event);"> <p id="label_au_news">新闻动态</p></a>
-			  </div>
-		 <svg xmlns="http://www.w3.org/2000/svg" id="svg_line_1">
-                    <line x1="350" y1="100" x2="645" y2="100" stroke-width="2"
-                         stroke="black" /> <!-- transform="rotate(42 500 100)"-->
-                
-                   <line x1="350" y1="100" x2="250" y2="20" stroke-width="2"
-		   stroke="black" /> <!-- transform="rotate(42 500 100)"-->
-
-                   <line x1="350" y1="100" x2="290" y2="20" stroke-width="2"
-		   stroke="black" /> <!-- transform="rotate(42 500 100)"-->
-                   
-                   <line x1="290" y1="20" x2="160" y2="90" stroke-width="2"
-		   stroke="black" /> <!-- transform="rotate(42 500 100)"-->
-
-                   <line x1="250" y1="20" x2="160" y2="90" stroke-width="2"
-		   stroke="black" /> <!-- transform="rotate(42 500 100)"-->
-
-                   <line x1="160" y1="90" x2="0" y2="120" stroke-width="2"
-		   stroke="black" /> <!-- transform="rotate(42 500 100)"-->
-
-                   <line x1="160" y1="90" x2="0" y2="30" stroke-width="2"
-		   stroke="black" /> <!-- transform="rotate(42 500 100)"-->
-
-                </svg>
-
-                </div>
-	       <div id="div_left">
-                     		       
-		</div>
-	        <div id="div_right">
-			<div id="aboutus_content">
-			    <p>我们追随超越我们的直觉，我们相信超越恒久的设计<br/>
-			       We follow our intuition, we believe in lasting design.
-			    </p>
-			     <div id="context_au_right">
-			        <p>
-				&nbsp&nbsp80元素装修工程公司由一支在成都装饰界小有名气而具有个性、独特化的优秀的80后为主的专业设计团队组成。以婚房、个性居室和别墅等高起点、高品质、高境界的家装原则为主，既而以“顾客第一”的服务宗旨，以一丝不苟、精益求精的态度和规范的管理、精湛的施工技术来回馈每一位顾客，并把每一套住房都作为样板房来对待，让每位顾客都能住进温馨、舒适的幸福家。<br/>
-
-				&nbsp&nbsp80元素秉承“以服务缔造口碑，以口碑成就品牌”的服务理念，在行业中率先推出处理问题总经理首问制，服务不满意登报致歉等措施。“真诚务实到永远，真心服务每一天”的企业宗旨，彰显出80元素装饰踏踏实实做人，做企业，认认真真为客户提供周到、及时、优质、舒心服务的务实态度。<br/>
-
-    &nbsp&nbsp80元素就是这样一个家装行业的领航企业，一个“追求无止境，创新每一天”的企业。
-			            <h3>我们的目标是:</h3>
-			                aaaa<br/>
-			                aaaa<br/>
-                                        aaaa<br/>
-			<h3>我们的宗旨是:</h3>
-			aaaa<br/>
-			aaaa<br/>
-			aaaa<br/>
-			aaaa<br/>
-			aaaa<br/>
-			aaaa<br/>	
-			</p>
-			</div>			
-		   </div>
-		   <div id = "news_content">
-				<ul>
-					<li>
-					<a href=#>公司成立</a> .................................... 2015-5-5
-					<li>
-				</ul>
-				afsafdgfgfhgfg
-			</div>
-	        </div>
-	    </div>
-	    <div id="right_total">
-		<svg xmlns="http://www.w3.org/2000/svg" id="svg_exit">
-		<a xlink:href="main.html">
-                 <polygon points="30,0 90,0 90,60"
-	                 style="fill:#cccccc;stroke:black;stroke-width:0"
-			 /> 
-	      <text x="53px" y="23px" style="font-size:15;fill:white;">
-	      返回            
-	      </text>
- 
-		</a>
-		</svg>
-		<!-- <div class="a"><a href="main.html" id="exit_a"><p id="exit_ap">&nbsp 返回</p></a></div>-->
-	    </div>
+<body>
+    <div id = "div_top">
+       <div id = "logo">
+          <p>
+              logo here
+          </p>
+       </div>
+       <div id="blankintop"></div>
     </div>
-   <div id="divfoot">
-	   <p id="logo">80ElementDesign<br/>80元素装饰设计</p>
-       <p id="address">Chengu JinniuDistrict<br/>成都金牛区</p>
-       <p id="phone">100-200300<br/>13888888888<br/>成都备101</p>
-   </div>
+    <div id = "div_body">
+         <div id = "div_body_left">
+		 <!--<p>navigators</p>-->
+            <a id="au_label_a" href=# onclick="ChangeAUContent(event);"> <p id="label_au_p">关于我们</p></a>
+	    <a id="au_label" href=# onclick="ChangeAUContent(event);"> <p id="label">案例集锦</p></a>
+       </div>
+         <div id = "div_body_middle">
+            <div id="body_title">
+		    
+	    </div>  
+	    <div id="body_context">
+            </div>    
+         </div>
+         <div id = "div_body_right">
+         
+	 </div>
+    </div>
+    <div id = "div_buttom">
+    
+    </div>
+
 </body>
 </html>
