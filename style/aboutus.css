@@ -9,7 +9,7 @@ a{
     text-decoration:none;	
 }
 
-a:link    {color:blue;}
+a:link    {color:white;}
 a:visited {color:black;}
 a:hover   {color:red;}
 a:active  {color:blue;}
@@ -46,11 +46,16 @@ color:white;
 
 #navigators
 {
-    width:49%;
+    width:100%;
     height:100%;
-	text-align:center;
-	font-size:20px;	
-	float:left;
+    //text-align:center;
+    font-size:20px;	
+    //float:left;
+
+    padding-top:15%;
+    padding-left:15%;
+
+    border:5%;
 
 }
 
@@ -71,6 +76,8 @@ color:white;
     float:left;
     background-color:blue;
     color:white;
+
+   // padding:5%;
     
 }
 

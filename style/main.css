@@ -203,8 +203,8 @@ body
 {
    // color:red;
     position:relative;
-    left:3%;
-    top:8%;
+   // left:3%;
+   // top:8%;
     //background-color:blue;
     width:14%;
     height:45%;
@@ -232,8 +232,8 @@ body
 {
    // color:red;
     position:relative;
-    left:9%;
-    top:0%;
+    //left:9%;
+    //top:0%;
     //background-color:blue;
     width:29%;
     height:8%;
@@ -248,8 +248,8 @@ body
 {
    // color:red;
     position:relative;
-    left:3%;
-    top:12%;
+   // left:3%;
+   // top:12%;
    // background-color:blue;
     width:9%;
     height:38%;
@@ -263,8 +263,8 @@ body
 {
    // color:red;
     position:relative;
-    left:-5%;
-    top:47%;
+    //left:-5%;
+    //top:47%;
    // background-color:blue;
     width:26%;
     height:12%;
@@ -277,8 +277,8 @@ body
 #svg_polygon
 {
    position:relative;
-   top:-2%;
-   left:-35%;
+   //top:-2%;
+   //left:-35%;
    width:34%;
    height:50%;
    //background-color:blue;
@@ -301,4 +301,16 @@ body
 {
 
 //	background-color:#f2f2f2;
+}
+.actual_img
+{
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(80%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    
+    filter: grayscale(100%);
+	
+    filter: gray;
+    
 }
