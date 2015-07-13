@@ -47,6 +47,7 @@ $(document).ready(function(){
 
        $("#svg_line3").css({"top":Y_toMove,"left":X_toMove});
        $("#svg_line3").width(X_Start-X_End);
+       $("#svg_line3").height(Y_End-Y_Start);
 
        Y_Start = $("#hr").offset().top;//exchange start and end.
        X_Start = $("#hr").offset().left;
