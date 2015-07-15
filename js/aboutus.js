@@ -38,7 +38,7 @@ $(document).ready(function(){
 			      $("#text_area").css("text-wrap","normal");
 			      $("#text_area").css("width","90%");
                               $("#text_area").css("text-align","left");
-
+                              $("#text_area").empty();
 			      $("#text_area").append(head_text,hr_text,data_display);
 
 			      $("#Company_Background").css("color","#CC0000");
