@@ -3,15 +3,16 @@
 *{
 	margin:0;
 	padding:0;
+//	color:gray;
 }
 
 a{
     text-decoration:none;	
 }
 
-a:link    {color:white;}
-a:visited {color:black;}
-a:hover   {color:red;}
+a:link    {color:gray;}
+a:visited {color:gray;}
+a:hover   {color:blue;}
 a:active  {color:blue;}
 
 body
@@ -22,19 +23,31 @@ body
 #div_top
 {
 //	background-color:#696969;
-color:white;
+       color:white;
 
 }
 
 #logo
 {
 	width:20%;
+	height:100%;
 	text-align:center;
 	font-size:40px;
 	float:left;
-	height:100%;
+	//height:100%;
+	vertical-align:middle;
+//	background-color:red;
+//	padding:10%;
+}
 
+#logo_p
+{
+    vertical-align:middle;
+   width:100%;
+   height:100%;
+   padding:5%;
 
+   color:white;
 }
 
 #blankintop
@@ -74,8 +87,8 @@ color:white;
 	width:25%;
 	height:100%;
     float:left;
-    background-color:blue;
-    color:white;
+   // background-color:blue;
+    color:gray;
 
    // padding:5%;
     
@@ -83,9 +96,14 @@ color:white;
 
 #list_aboutus
 {
-    margin-top:60px;
-    margin-left:60px;
+    margin-top:20%;
+    margin-left:30%;
     font-size:20px;
+}
+
+li
+{
+    margin:5%;
 }
 
 #div_body_middle
@@ -101,6 +119,7 @@ color:white;
 {
     width:100%;
     height:15%;
+    color:gray;
 
 }
 
@@ -108,7 +127,7 @@ color:white;
 {
    width:100%;
    height:85%;
-   background-color:green;
+  // background-color:green;
 }
 
 
