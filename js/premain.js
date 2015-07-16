@@ -3,7 +3,7 @@ var numClicked = 0;
 
 $(document).ready(function(){
   // alert("in function");
-  // numClicked = 0;
+   numClicked = 0;
    $(document).click(
 	   function(){
 	  // alert("body clicked"+numClicked);
@@ -42,7 +42,7 @@ $(document).ready(function(){
 }*/
    if(numClicked==0)
 {
-	alert("clicked number is 0");
+//	alert("clicked number is 0");
 	 $("#pb1").fadeIn();
         numClicked = numClicked +1;
 }
