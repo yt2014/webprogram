@@ -4,7 +4,7 @@
     <meta http-equiv="Content-type" content="text/html; charset=GB2312" />
     <link href="style/pre_main.css" rel="stylesheet" type="text/css"></link>
     
-    <title>80元素装修设计</title>
+    <title>80室内设计</title>
       <script Language="JavaScript" src="js/jquery-1.11.2.min.js">
      </script>
      <script Language="JavaScript" src="js/premain.js">
@@ -12,9 +12,13 @@
      <script>
 	 $(document).ready(
 	 function(){
-                     $("#p1").fadeIn(1000,p2fadein);
+                     $("#p1").fadeIn(1000,p21fadein);
 		 }
 		 );
+       function p21fadein()
+       {
+          $("#p2_1").fadeIn(500,p2fadein);
+       }
 
        function p2fadein()
        {
@@ -29,10 +33,11 @@
 </head>
 <body > <!--onload = "startTime()"-->
     <div>
-	    <P id="p1" class="p1_0"><b>80Elements Design <br />80元素装修设计工程</b></p>
-	    <p id="p2"><b>We prepared to provide you Perfect..Convenient..Design..At Any Time...<br />我们随时准备为您提供完美的设计，高品质的工程</b></p>
+	    <P id="p1" class="p1_0"><b>80 Interior Design <br />80 室内设计</b></p>
+	    <p id="p2_1"><b>Getting rid of Redundancy, And Pursuing the Simple. Design for your life style</p>
+		    <p id ="p2">去繁求简，设计你的生活方式</b></p>
 	<br />
-	<p id="p3"><a href="main.html">ENTER +</a></p>
+	<p id="p3"><a href="premain_in.html">ENTER +</a></p>
     </div>
 </body>
 </html>

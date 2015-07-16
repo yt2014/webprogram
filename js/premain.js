@@ -1,55 +1,84 @@
-function startTime()
+var numClicked = 0;
+
+
+$(document).ready(function(){
+  // alert("in function");
+  // numClicked = 0;
+   $(document).click(
+	   function(){
+	  // alert("body clicked"+numClicked);
+          /* switch(numClicked)
+           {
+             case 0:
+             {
+		  $("#pb1").fadein();
+		  alert("num is 0");
+                  numClicked = numClicked+1;
+	     }
+             break;
+             case 1:
+                 $("#pb2").fadein();
+                  numClicked = numClicked+1; 
+             break;
+	     case 2:
+	          $("#pb3").fadein();
+                  numClicked = numClicked+1; 
+	     break;
+	     case 3:
+	           $("#pb4").fadein();
+                  numClicked = numClicked+1; 
+	     break;
+	     case 4:
+	          $("#pb5").fadein();
+                  numClicked = numClicked+1; 
+	     break;
+	     case 5:
+	           $("#pb6").fadein();
+                  numClicked = numClicked+1; 
+	     break;
+             default:
+	     break;
+ 
+}*/
+   if(numClicked==0)
 {
-    setTimeout('Display_1_Crew()',600);
-    setTimeout('Display_1_Crew()',800);
-    setTimeout('Display_2_Crew()',1000);
-    setTimeout('Display_2_Crew()',1200); 
-    setTimeout('Display_Clear()',1500);
-    setTimeout('Display_2nd_line()',2000);
-    setTimeout('Display_3rd_line()',2500);
+	alert("clicked number is 0");
+	 $("#pb1").fadeIn();
+        numClicked = numClicked +1;
+}
+	else if(numClicked==1)
+{
+//	alert("clicked number is 0");
+	 $("#pb2").fadeIn();
+        numClicked = numClicked +1;
+}
+else if(numClicked==2)
+{
+//	alert("clicked number is 0");
+	 $("#pb3").fadeIn();
+        numClicked = numClicked +1;
+}
+else if(numClicked==3)
+{
+//	alert("clicked number is 0");
+	 $("#pb4").fadeIn();
+        numClicked = numClicked +1;
+}
+else if(numClicked==4)
+{
+//	alert("clicked number is 0");
+	 $("#pb5").fadeIn();
+        numClicked = numClicked +1;
+}
+else if(numClicked==5)
+{
+//	alert("clicked number is 0");
+	 $("#pb6").fadeIn();
+	 $("#logo").fadeIn();
+        numClicked = numClicked +1;
 }
 
 
-function Display_1_Crew()
-{
-   var child_p1 = document.getElementById('p1');
-  // child_p1.style.textShadow = "0px 0px 6px red";
-//   child_p1.style.color = "transparent";
-   // child_p1.style.color = "white";
-   child_p1.className = "p1_1";
-}
+	   });
 
-function Display_2_Crew()
-{
-   var child_p1 = document.getElementById('p1');
- //  child_p1.style.textShadow = "0px 0px 3px red";
- //  child_p1.style.color = "transparent";
- //    child_p1.style.color = "blue";
-     child_p1.className = "p1_2";
-}
-function Display_Clear()
-{
-   var child_p1 = document.getElementById('p1');
- //  child_p1.style.textShadow = "0px 0px 0px red";
-//    child_p1.style.color = "red"; 
-    child_p1.className = "p1_3";
-}
-function Display_11_Crew()
-{
-   var child_p1 = document.getElementById('p1');
- //  child_p1.style.textShadow = "0px 0px 0px red";
-//    child_p1.style.color = "red"; 
-    child_p1.className = "p1_4"; 
-}
-
-
-
-function Display_2nd_line()
-{
-
-}
-function Display_2rd_line() 
-{
-
-}
-
+});

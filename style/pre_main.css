@@ -14,6 +14,7 @@ height:300px;
 div #p1
 {
    display:none;
+   color:#AA0000;
 }
 
 
@@ -23,6 +24,21 @@ div #p2
     text-align:center;
     color:white;
     display:none;
+    font-size:20px;
+    padding:0;
+    margin:0;
+   
+}
+
+#p2_1
+{    
+    width:100%;
+    text-align:center;
+    color:white;
+    display:none;
+    font-size:15px;
+    padding:0;
+    margin:0;
    
 }
 
@@ -43,7 +59,7 @@ div #p3 a
     font-family:Arial,Helvetica,sans-serif;
     font-size:10px;
      /*width:100px;*/
-     background-color:#CC0000;
+     background-color:#AA0000;
      color:white;
      text-decoration:none;
 }
@@ -76,7 +92,7 @@ div #p3 a:hover
     text-align:center;
     margin-top:200px;
     /*text-shadow: 0px 0px 6px purple;*/
-    color:#CC0000;
+    color:#AA0000;
     font-size:40px;
     -webkit-filter:blur(2px);
     -ms-filter:blur(2px);
