@@ -43,36 +43,49 @@ $(document).ready(function(){
    if(numClicked==0)
 {
 //	alert("clicked number is 0");
+    $("#pb1").css("color","#CC0000");
 	 $("#pb1").fadeIn();
+   // $("#pb1").css("color","gray");
         numClicked = numClicked +1;
 }
 	else if(numClicked==1)
 {
-//	alert("clicked number is 0");
+   //	alert("clicked number is 0");
+   $("#pb2").css("color","#CC0000");
 	 $("#pb2").fadeIn();
+    $("#pb1").css("color","#696969");
         numClicked = numClicked +1;
 }
 else if(numClicked==2)
 {
 //	alert("clicked number is 0");
+   $("#pb3").css("color","#CC0000");
 	 $("#pb3").fadeIn();
+    $("#pb2").css("color","#696969");
         numClicked = numClicked +1;
 }
 else if(numClicked==3)
 {
 //	alert("clicked number is 0");
+    $("#pb4").css("color","#CC0000");
 	 $("#pb4").fadeIn();
+    $("#pb3").css("color","#696969");
+
         numClicked = numClicked +1;
 }
 else if(numClicked==4)
 {
 //	alert("clicked number is 0");
+   $("#pb5").css("color","#CC0000");
 	 $("#pb5").fadeIn();
+    $("#pb4").css("color","#696969");
         numClicked = numClicked +1;
 }
 else if(numClicked==5)
 {
 //	alert("clicked number is 0");
+   $("#pb6").css("color","#696969");
+   $("#pb5").css("color","#696969");
 	 $("#pb6").fadeIn();
 	 $("#logo").fadeIn();
         numClicked = numClicked +1;
