@@ -24,12 +24,25 @@ a{
 #logo_img
 {
    float:left;
-   padding-left:20px;
+   margin-left:20px;
+   margin-right:5px;
+   padding-top:7px;
+   width:60px;
+   height:50px;
+   //background-color:white;
+}
+
+.logo_svg
+{
+   //padding-left:20px;
+  // float:left;
+   width:100%;
+   height:100%;
 }
 
 #logo_text
 {
-   padding-top:15px;
+   padding-top:10px;
    float:left;
    font-size:20px;
    font-weight:bold;
@@ -62,5 +75,63 @@ a{
 {
    width:100%;
    height:600px;
-   background-color:blue;
+   //background-color:blue;
+}
+
+
+#contactus_area
+{
+   width:74%;
+   height:400px;
+   padding-left:13%;
+   padding-right:13%;
+   //background-color:blue; 
+   word-wrap:auto;
+   padding-top:20px;
+   color:#696969;
+   text-align:center;
+}
+
+#au_title
+{
+   // color:#dcdcdc;
+   font-size:30px;
+   text-align:center;
+}
+
+#au_en
+{
+        font-size:40px;
+	font-weight:bold;
+}
+
+
+#au_context
+{
+	line-height:200%;
+	padding-top:20px;
+	
+}
+
+#view_more_au
+{
+	padding-top:30px;
+    float:right;
+    padding-right:50px;
+}
+.symbol_vm
+{
+	font-weight:900;
+	font-size:20px;
+}
+
+#div_buttom
+{
+   background-color:#666666;
+   color:white;
+  // height:90px;
+  // width:100%;
+   vertical-align:middle;
+   padding-top:10px;
+   height:250px;
 }
