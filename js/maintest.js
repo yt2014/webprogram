@@ -44,6 +44,31 @@ $(document).ready(function(){
 	     flagFlash = 1;
 	});
 
+
+	// $(".svg_show").mouseover(
+        //function () {
+	//	      alert("mouseenter ";
+		      //$(event.target.children[0]).css("display","");
+		      
+	  //          });
+
+        $(".svg_show").mouseover(function(event){
+	
+	     //flagFlash = 1;
+	     //alert("mouseenter"+event.target);
+
+	     $(event.target).siblings("text").css("visibility","visible");
+	});
+
+	
+        $(".svg_show").mouseout(function(event){
+	
+	     //flagFlash = 1;
+	   //  alert("mouseenter"+event.target);
+
+	     $(event.target).siblings("text").css("visibility","hidden");
+	});
+
        
 });
 
