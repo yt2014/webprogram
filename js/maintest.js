@@ -4,21 +4,42 @@ var countFlash = 0;
 var flagFlash = 0;
 
 var arColors = new Array("red","blue","blue","yellow","gray","white");
+var arbg = new Array("url(\"pictures/garden.jpg\")","url(\"pictures/garden1.jpg\")","url(\"pictures/keting10.jpg\")","url(\"pictures/cateen.jpg\")");
 
 function firstFlash(){
 
  //   document.getElementById("nowDiv").innerHTML = now; //div的html是now这个字符串 
     if(flagFlash==1)
     {
-	//alert("flash");
-        $("#flash_area").css("background-color",arColors[countFlash]);
-        countFlash = countFlash + 1;
-        if(countFlash==6)
+//	alert("flash "+arbg[countFlash]);
+        if(countFlash%2==0)
 	{
-            countFlash = 0;
-	}	
+           $("#flash_area").css("background",arbg[countFlash]);
+	   $("#inFlashArea").fadeOut(1000);
+           countFlash = countFlash + 1;
+           if(countFlash==4)
+           {
+              countFlash = 0;
+	   }	
+	   $("#inFlashArea").css("background",arbg[countFlash]);
+	   //alert("after fade out");
+	}
+	else
+	{
+           $("#inFlashArea").fadeIn(1000);
+           countFlash = countFlash + 1;
+           if(countFlash==4)
+           {
+              countFlash = 0;
+	   }	
+	   $("#flash_area").css("background",arbg[countFlash]);
+
+	  // alert("after fade in " + countFlash);
+	    
+	}
+       
     }
-    setTimeout("firstFlash()",2000); //设置过1000毫秒就是1秒，调用show方法
+    setTimeout("firstFlash()",6000); //设置过1000毫秒就是1秒，调用show方法
 }
 
 
