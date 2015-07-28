@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="GB2312">
+<!--<link rel="stylesheet" type="text/css" href="style/maintest.css">-->
+<link rel="stylesheet" type="text/css" href="style/aboutusTest.css">
+<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+<!--<script type="text/javascript" src="js/maintest.js"></script>-->
+<script type="text/javascript" >
+
+var arBackgrounds = new Array("red","blue","blue","yellow","gray","white");
+ 
+$(document).ready(function(){
+	
+//	alert("ready height is "+$(document).innerHeight());
+//	$("#div_top").height(80);
+	$("body").width($(document).innerWidth());
+//        $("#div_body").height(400);
+	$("#div_body").height($(document).innerHeight()-200);
+//	$("#div_buttom").height($(document).innerHeight()*0.1);
+//alert("doc ready");
+
+	$("#picture_show").width($("#div_body").width()-200);
+//	$("#picture_show").height($("#div_body").height()-200);
+	$("#picture_left").width(($("#picture_show").width()-700)/2);
+	$("#picture_right").width(($("#picture_show").width()-700)/2);
+
+
+
+        $("#picture_center").mouseover(function(event){
+	
+	     //flagFlash = 1;
+	   //  alert("mouseenter"+event.target);
+
+	     // $(event.target).siblings("text").css("visibility","visible");
+            $(".circle_filter").css("fill-opacity","0.5");
+	});
+
+	
+        $("#picture_center").mouseout(function(event){
+	
+	     //flagFlash = 1;
+	   //  alert("mouseenter"+event.target);
+
+	    // $(event.target).siblings("text").css("visibility","hidden");
+		 $(".circle_filter").css("fill-opacity","0.1");
+	});	
+
+});
+
+</script>
+<title>80室内设计</title>
+<style type="text/css">
+    #body_left
+    {
+	width:200px;
+	height:100%;
+	background-color:green;
+	float:left;
+    }
+    #picture_show
+    {
+	background-color:gray;
+	height:500px;
+	float:left;
+    }
+    #picture_left
+    {
+	//width:15%;
+	height:100%;
+	float:left;
+    }
+    #picture_center
+    {
+	width:700px;
+	height:500px;
+	//background-color:red;
+	float:left;
+	background:url("pictures/keting7.jpg");
+    }
+    #picture_right
+    {
+	//width:15%;
+	height:100%;
+	float:left;
+    }
+
+    .circle_filter
+    {
+	fill-opacity:0.1;
+    }
+
+  //  .circle_filter:hover
+  //  {
+//	fill-opacity:0.5;
+//    }
+
+    #picture_show:hover
+    {
+      
+    }
+    #left_arrow
+    {
+	 background:url("pictures/left_48.ico");
+    }
+</style>
+
+</head>
+<body>
+    <div id = "div_top">
+       <div id = "logo_img">
+	       <!--<img src="pictures/logo1.png"/>-->
+	  <svg xmlns="http://www.w3.org/2000/svg" class="logo_svg">
+          <line x1="0" y1="0" x2="0" y2="100%" stroke-width="10"
+          stroke="#cc0000" /> <!-- transform="rotate(42 500 100)"-->
+          <line x1="6" y1="0" x2="100%" y2="0" stroke-width="10"
+          stroke="#cc0000" />
+          <line x1="100%" y1="0" x2="100%" y2="100%" stroke-width="10"
+          stroke="#cc0000" />
+          <line x1="0" y1="53%" x2="40%" y2="53%" stroke-width="4"
+          stroke="#cc0000" />
+          <line x1="42%" y1="7" x2="42%" y2="100%" stroke-width="4"
+          stroke="#cc0000" />
+          <line x1="7" y1="100%" x2="40%" y2="100%" stroke-width="4"
+          stroke="#cc0000" />
+          <line x1="60%" y1="0" x2="60%" y2="100%" stroke-width="4"
+          stroke="#cc0000" />
+          <line x1="60%" y1="100%" x2="53" y2="100%" stroke-width="4"
+	  stroke="#cc0000" />
+
+         </svg>
+       </div>
+       <div class="logo_text">
+          <p>80室内设计</p>
+          <p>80Interior Design</p>
+       </div>
+       <div id="navigator">
+           <a href="mainTest.html"> 首页</a>
+	   <a href="#"><p id="thispage">关于我们</p></a>
+           <a href="#">团队介绍</a>
+           <a href="#">案例集锦</a>
+           <a href="#">新闻动态</a>
+           <a href="#">联系我们</a>
+       </div>
+    </div>
+    <div id="div_body">
+	<div id="body_left">
+         aaaaabbbbb 
+	  </div>
+	  <div id="picture_show">
+	      <div id="picture_left"></div>
+	      <div id="picture_center">
+	      <svg xmlns="http://www.w3.org/2000/svg" class="logo_svg">
+	      
+	      <circle class="circle_filter" id = "left_arrow" cx="24" cy="250" r="24" stroke="black"
+                stroke-width="0" fill="blue" />                   
+	      </svg>
+
+	      </div>
+	      <div id="picture_right"></div>
+	  </div>
+    </div>
+
+     <div id = "div_buttom">
+	    <div id="bottom_middle">
+		    <div id="address">
+                       <div id = "logo_img_bottom">
+	       <!--<img src="pictures/logo1.png"/>-->
+	              <svg xmlns="http://www.w3.org/2000/svg" class="logo_svg">
+                      <line x1="0" y1="0" x2="0" y2="100%" stroke-width="10"
+                      stroke="#DCDCDC" /> <!-- transform="rotate(42 500 100)"-->
+                      <line x1="6" y1="0" x2="100%" y2="0" stroke-width="10"
+          stroke="#DCDCDC" />
+                     <line x1="100%" y1="0" x2="100%" y2="100%" stroke-width="10"
+          stroke="#DCDCDC" />
+                    <line x1="0" y1="53%" x2="40%" y2="53%" stroke-width="4"
+          stroke="#DCDCDC" />
+                    <line x1="42%" y1="7" x2="42%" y2="100%" stroke-width="4"
+          stroke="#DCDCDC" />
+                    <line x1="7" y1="100%" x2="40%" y2="100%" stroke-width="4"
+          stroke="#DCDCDC" />
+                    <line x1="60%" y1="0" x2="60%" y2="100%" stroke-width="4"
+          stroke="#DCDCDC" />
+                    <line x1="60%" y1="100%" x2="53" y2="100%" stroke-width="4"
+	  stroke="#DCDCDC" />
+
+                   </svg>
+	   </div><!--end of logo_img_bottom -->
+            <div class="logo_text">
+                <p>80室内设计</p>
+                <p>80Interior Design</p>
+            </div>
+
+            <div id = "context_bottom">
+	       <p> 成都八零元素装饰工程有限公司 </p>
+	       <p> 成都市青羊区光华北三路98号17栋15楼1503号</p>
+	       <p>13540686235<p>
+
+           </div>
+       </div><!--  end of address-->
+       <div id="copyright">
+
+	       <p> Copyright &copy; 八零元素装饰工程有限公司版权所有 川ICP备xxxxxx号</p>
+	</div>
+
+       </div>
+	    
+    </div>
+
+    </body>
+</html>
