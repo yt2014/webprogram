@@ -5,6 +5,8 @@ var flagFlash = 0;
 
 var arColors = new Array("red","blue","blue","yellow","gray","white");
 var arbg = new Array("url(\"pictures/garden.jpg\")","url(\"pictures/garden1.jpg\")","url(\"pictures/keting10.jpg\")","url(\"pictures/cateen.jpg\")");
+var arimgs = new Array("#img1","#img2","#img3","#img4");
+
 
 function firstFlash(){
 
@@ -12,31 +14,38 @@ function firstFlash(){
     if(flagFlash==1)
     {
 //	alert("flash "+arbg[countFlash]);
-        if(countFlash%2==0)
-	{
-           $("#flash_area").css("background",arbg[countFlash]);
-	   $("#inFlashArea").fadeOut(1000);
-           countFlash = countFlash + 1;
-           if(countFlash==4)
-           {
-              countFlash = 0;
-	   }	
-	   $("#inFlashArea").css("background",arbg[countFlash]);
-	   //alert("after fade out");
-	}
-	else
-	{
-           $("#inFlashArea").fadeIn(1000);
-           countFlash = countFlash + 1;
-           if(countFlash==4)
-           {
-              countFlash = 0;
-	   }	
-	   $("#flash_area").css("background",arbg[countFlash]);
+        
+          // $("#flash_area").css("background",arbg[countFlash]);
+	 //  $("#inFlashArea").fadeOut(1000);
+           $(arimgs[countFlash]).fadeOut();
 
-	  // alert("after fade in " + countFlash);
-	    
-	}
+	  // alert("show img"+((countFlash+1)%4+1).toString()+" now");
+	   var k=0;
+	   var i=0;
+           for(i=0;i<4;i++)
+	   {
+              k=i+countFlash+1;
+	      if(k>=4)
+	      {
+		  k=k-4;
+	      }
+	     // alert("img"+(k+1).toString() + " " +(-1-i).toString());
+	      $(arimgs[k]).css("z-index",(-1-i).toString());
+	     // if(i==3)
+	     // {
+               //    $(arimgs[k]).fadeIn();
+	     // }
+	   }   
+           $(arimgs[countFlash]).fadeIn();	   
+
+           countFlash = countFlash + 1;
+           if(countFlash==4)
+           {
+              countFlash = 0;
+	   }	
+	  // $("#inFlashArea").css("background",arbg[countFlash]);
+	   //alert("after fade out");
+	
        
     }
     setTimeout("firstFlash()",6000); //设置过1000毫秒就是1秒，调用show方法
@@ -50,6 +59,7 @@ $(document).ready(function(){
 //	$("#div_body").height($(document).innerHeight()*0.8);
 //	$("#div_buttom").height($(document).innerHeight()*0.1);
 	$("body").width($(document).innerWidth());
+	//$("#img4").fadeOut();
         /*in aboutus page, link clicked events in the left*/
 	countFlash=0;
 	flagFlash=1;
