@@ -7,7 +7,12 @@ $(document).ready(function(){
 	$("#div_body").height($(document).innerHeight()-200);
 //	$("#div_buttom").height($(document).innerHeight()*0.1);
 //alert("doc ready");
-       
+
+        var width_picturesShow = $("#picturesShow").width();
+       // alert("picshow width: "+width_picturesShow);       
+        $("#pic_links").css("margin-left",(width_picturesShow-800)/2);
+
+        $("#pic_links").css("margin-right",(width_picturesShow-800)/2);
 	
       
 });
