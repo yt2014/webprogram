@@ -155,16 +155,92 @@ a{
 #left_column
 {
 	height:100%;
-	width:250px;
-	background-color:blue;
+	width:15%;
+//	background-color:blue;
 	text-align:center;
+	float:left;
 }
-#pictureLinks
-{
-	height:80%;
-	width:80%;
-	background-color:red;
-	padding-left:10%;
-//	padding-top:10%;
 
+#picturesShow
+{
+    float:left;
+    width:70%;
+    height:100%;
+    background-color:#dcdcdc;
 }
+
+#body_right
+{
+    height:100%;
+    width:15%;
+  //  background-color:blue;
+    float:left;
+}
+
+#pic_links
+{
+    height:200px;
+    width:896px;
+    margin-top:20px;
+  //  background-color:yellow;
+}
+#left_button
+{
+   float:left;
+   //background:url("../pictures/left_48.ico");
+   width:48px;
+   padding-top:76px;
+   height:124px;
+   background-color:white;
+}
+
+.short_img
+{
+   width:200px;
+   height:200px;
+  // border-color:black;
+  float:left;
+  padding:0px;
+  margin:0px;
+}
+
+#shortImg1
+{
+    background:url("../pictures/img1.jpg");
+    //background-color:red;
+}
+
+.svg_shortImg
+{
+    width:200px;
+    height:200px;
+}
+
+#shortImg2
+{
+    background:url("../pictures/img2.jpg");
+    //background-color:red;
+}
+
+#shortImg3
+{
+    background:url("../pictures/img3.jpg");
+    //background-color:red;
+}
+#shortImg4
+{
+    background:url("../pictures/img4.jpg");
+    //background-color:red;
+}
+
+#right_button
+{
+   float:left;
+   //background:url("../pictures/left_48.ico");
+   width:48px;
+   padding-top:76px;
+   height:124px;
+   background-color:white;
+}
+
+
