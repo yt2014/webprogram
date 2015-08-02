@@ -179,8 +179,8 @@ a{
 
 #pic_links
 {
-    height:200px;
-    width:896px;
+    height:170px;
+    width:576px;
     margin-top:20px;
   //  background-color:yellow;
 }
@@ -189,15 +189,15 @@ a{
    float:left;
    //background:url("../pictures/left_48.ico");
    width:48px;
-   padding-top:76px;
-   height:124px;
+   padding-top:36px;
+   height:84px;
    background-color:white;
 }
 
 .short_img
 {
-   width:200px;
-   height:200px;
+   width:120px;
+   height:120px;
   // border-color:black;
   float:left;
   padding:0px;
@@ -212,8 +212,9 @@ a{
 
 .svg_shortImg
 {
-    width:200px;
-    height:200px;
+    width:120px;
+    height:120px;
+   // visibility:hidden;
 }
 
 #shortImg2
@@ -238,9 +239,79 @@ a{
    float:left;
    //background:url("../pictures/left_48.ico");
    width:48px;
-   padding-top:76px;
-   height:124px;
+   padding-top:36px;
+   height:84px;
    background-color:white;
+   
 }
 
+#text_total
+{
+    //background-color:white;
+    width:480px;
+    height:40px;
+    float:left;
+    margin-left:48px;
+    margin-top:5px;
+}
 
+#one_display
+{
+   width:800px;
+   height:300px;
+  // background-color:white;
+   padding-top:0px;
+   margin-top:0px;
+   background:url("../pictures/keting1.jpg");
+}
+
+#move_left_one
+{
+  // background-color:red;
+}
+
+#svg_left_button_one
+{
+   width:50px;
+   height:50px;
+  // background:url("../pictures/left_48.ico");
+   position:relative;
+   left:-246px;
+   top:126px;
+  // float:left;
+}
+
+#svg_right_button_one
+{
+   width:50px;
+   height:50px;
+  // background:url("../pictures/left_48.ico");
+   position:relative;
+   left:246px;
+   top:126px;
+  // float:left;
+
+}
+
+#text_left
+{
+   width:100px;
+   height:100%;
+   float:left;
+   background-color:red;
+}
+
+#picture_area
+{
+    width:600px;
+    height:100%;
+    float:left;
+}
+
+#text_right
+{
+   width:100px;
+   height:100%;
+   float:left;
+   background-color:blue;
+}
