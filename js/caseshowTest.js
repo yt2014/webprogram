@@ -10,10 +10,11 @@ var picsArray = new Array();
 var currentCaseIndex = -1;
 var currentPictureIndex = 0;
 
-function caseInfo(num_pics,pics)
+function caseInfo(num_pics,pics,pathname)
 {
    this.num_pics = num_pics;
    this.pics = pics;
+   this.pathname = pathname;
 }
 
 function picInfo(pic,descrip)
@@ -27,16 +28,27 @@ function initCasesInfo()
 {
     var i=0;
 
-    for(i=0;i<3;i++)
+    for(i=0;i<19;i++)
     {
-	picinfo_one = new picInfo(picsXiaoChun1[i],discrip1[i]);
-        picsArray[i] = picinfo_one;	
+	    if(i<3)
+	    {
+	      picinfo_one = new picInfo(picsXiaoChun1[i],discrip1[i]);
+              picsArray[i] = picinfo_one;
+	    }
+	    else
+	    {
+		 var picname = "img" + (i-2).toString() + ".jpg";
+		 var disc = "实景图" + (i-2).toString(); 
+	         picinfo_one = new picInfo(picname,disc);
+                 picsArray[i] = picinfo_one;
+	    }
+            	    
     }
 
-    casesInfo[0] = new caseInfo(3,picsArray);
+    casesInfo[0] = new caseInfo(19,picsArray,"fandong/xiaochunZuopin/DongAnYangban/Xiaoguo/");
 }
 
-var picsXiaoChun1 = new Array("fandong/xiaochunZuopin/DongAnYangban/Xiaoguo/mainbed.jpg","fandong/xiaochunZuopin/DongAnYangban/Xiaoguo/main.jpg","fandong/xiaochunZuopin/DongAnYangban/Xiaoguo/cateen.jpg");
+var picsXiaoChun1 = new Array("mainbed.jpg","main.jpg","cateen.jpg");
 var discrip1 = new Array("主卧效果图","起居室效果图","餐厅效果图");
 
 
@@ -133,11 +145,14 @@ $(document).ready(function(){
                      currentCaseIndex = indexFound;
 		     currentPictureIndex = 0;
 		    // alert(casesInfo[indexFound].pics[currentPictureIndex].pic);
-                     $("#picture_area").css("background","url(" + casesInfo[indexFound].pics[currentPictureIndex].pic + ")");
+		    var picInfoOne = casesInfo[currentCaseIndex].pics[currentPictureIndex];
+		    var fullPath = casesInfo[currentCaseIndex].pathname + picInfoOne.pic;
+		   // alert(fullPath);
+                     $("#picture_area").css("background","url(" + fullPath + ")");
                     //  alert(caseClicked);
 		     $("#text_left").empty();
 
-                     $("#text_left").append(casesInfo[currentCaseIndex].pics[currentPictureIndex].descrip);
+                     $("#text_left").append(picInfoOne.descrip);
                      }
 	            }
 		             );
@@ -188,11 +203,14 @@ $(document).ready(function(){
 		   //  alert("total: " + numTotal + "currentPictureIndex" + currentPictureIndex);
 
 		    // alert()
+                    var picInfoOne = casesInfo[currentCaseIndex].pics[currentPictureIndex];
+		    var fullPath = casesInfo[currentCaseIndex].pathname + picInfoOne.pic;
+		    //alert(fullPath);
 
-                     $("#picture_area").css("background","url(" + casesInfo[currentCaseIndex].pics[currentPictureIndex].pic + ")");
+                     $("#picture_area").css("background","url(" + fullPath + ")");
                      $("#text_left").empty();
 
-                     $("#text_left").append(casesInfo[currentCaseIndex].pics[currentPictureIndex].descrip);
+                     $("#text_left").append(picInfoOne.descrip);
                      }
 
 	            }
@@ -219,11 +237,14 @@ $(document).ready(function(){
 		   //  alert("total: " + numTotal + "currentPictureIndex" + currentPictureIndex);
 
 		    // alert()
+		    var picInfoOne = casesInfo[currentCaseIndex].pics[currentPictureIndex];
+		    var fullPath = casesInfo[currentCaseIndex].pathname + picInfoOne.pic;
+		    
 
-                     $("#picture_area").css("background","url(" + casesInfo[currentCaseIndex].pics[currentPictureIndex].pic + ")");
+                     $("#picture_area").css("background","url(" + fullPath + ")");
                      $("#text_left").empty();
 
-                     $("#text_left").append(casesInfo[currentCaseIndex].pics[currentPictureIndex].descrip);
+                     $("#text_left").append(picInfoOne.descrip);
                      }
 
 	            }
