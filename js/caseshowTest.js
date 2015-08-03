@@ -36,7 +36,7 @@ function initCasesInfo()
     casesInfo[0] = new caseInfo(3,picsArray);
 }
 
-var picsXiaoChun1 = new Array("../fandong/xiaochunZuopin/DongAnYangban/Xiaoguo/mainbed.jpg","../fandong/xiaochunZuopin/DongAnYangban/Xiaoguo/main.jpg","../fandong/xiaochunZuopin/DongAnYangban/Xiaoguo/cateen.jpg");
+var picsXiaoChun1 = new Array("fandong/xiaochunZuopin/DongAnYangban/Xiaoguo/mainbed.jpg","fandong/xiaochunZuopin/DongAnYangban/Xiaoguo/main.jpg","fandong/xiaochunZuopin/DongAnYangban/Xiaoguo/cateen.jpg");
 var discrip1 = new Array("主卧效果图","起居室效果图","餐厅效果图");
 
 
