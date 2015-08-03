@@ -36,8 +36,8 @@ function initCasesInfo()
     casesInfo[0] = new caseInfo(3,picsArray);
 }
 
-var picsXiaoChun1 = new Array("../fandong/肖春作品/东岸样板房/效果图/主卧3.jpg","../fandong/肖春作品/东岸样板房/效果图/起居厅2.jpg","../fandong/肖春作品/东岸样板房/效果图/餐厅2.jpg");
-var discrip1 = new Array("main bedroom","main room","cateen");
+var picsXiaoChun1 = new Array("../fandong/xiaochunZuopin/DongAnYangban/Xiaoguo/mainbed.jpg","../fandong/xiaochunZuopin/DongAnYangban/Xiaoguo/main.jpg","../fandong/xiaochunZuopin/DongAnYangban/Xiaoguo/cateen.jpg");
+var discrip1 = new Array("主卧效果图","起居室效果图","餐厅效果图");
 
 
 function findIndexClicked(idToFind)
@@ -132,7 +132,7 @@ $(document).ready(function(){
 	             $("#text_total").load(caseTextArray[indexFound]);
                      currentCaseIndex = indexFound;
 		     currentPictureIndex = 0;
-		     alert(casesInfo[indexFound].pics[currentPictureIndex].pic);
+		    // alert(casesInfo[indexFound].pics[currentPictureIndex].pic);
                      $("#picture_area").css("background","url(" + casesInfo[indexFound].pics[currentPictureIndex].pic + ")");
                     //  alert(caseClicked);
 		     $("#text_left").empty();
