@@ -198,6 +198,37 @@ $(document).ready(function(){
 	            }
 		             );
 
+	$("#move_right_one").click(
+        function (event) {
+
+	             event.preventDefault();
+		      event.stopPropagation();
+		     
+	             //alert(event.target);
+		     if(currentCaseIndex!=-1)
+		     {
+		     var numTotal = casesInfo[currentCaseIndex].num_pics;
+
+                     currentPictureIndex = currentPictureIndex - 1;
+
+		     if(currentPictureIndex==-1)
+		     {
+		        currentPictureIndex = numTotal-1; 
+		     }
+
+		   //  alert("total: " + numTotal + "currentPictureIndex" + currentPictureIndex);
+
+		    // alert()
+
+                     $("#picture_area").css("background","url(" + casesInfo[currentCaseIndex].pics[currentPictureIndex].pic + ")");
+                     $("#text_left").empty();
+
+                     $("#text_left").append(casesInfo[currentCaseIndex].pics[currentPictureIndex].descrip);
+                     }
+
+	            }
+		             ); 
+
 
        
 
