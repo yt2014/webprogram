@@ -1,4 +1,4 @@
-
+﻿
 var caseClicked = 0;
 
 var caseTextArray = new Array("case1.txt","case2.txt","case3.txt","case4.txt");
@@ -38,7 +38,7 @@ function initCasesInfo()
 	    else
 	    {
 		 var picname = "img" + (i-2).toString() + ".jpg";
-		 var disc = "ʵ��ͼ" + (i-2).toString(); 
+		 var disc = "Êµ¾°Í¼" + (i-2).toString(); 
 	         picinfo_one = new picInfo(picname,disc);
                  picsArray[i] = picinfo_one;
 	    }
@@ -49,17 +49,19 @@ function initCasesInfo()
 
     //picsArray.length = 0;
     picsArray1 = new Array();
-    picinfo_one = new picInfo("cateen.jpg","����");
+    picinfo_one = new picInfo("cateen.jpg","²ÍÌü");
     picsArray1[0] = picinfo_one;
-    picinfo_one = new picInfo("keting.jpg","����");
+    picinfo_one = new picInfo("keting.jpg","¿ÍÌü");
     picsArray1[1] = picinfo_one;
 
     casesInfo[1] = new caseInfo(2,picsArray1,"fandong/xiaochunZuopin/DongAnYangban/LiZhai/");
 }
 
 var picsXiaoChun1 = new Array("mainbed.jpg","main.jpg","cateen.jpg");
-var discrip1 = new Array("����Ч��ͼ","�����Ч��ͼ","����Ч��ͼ");
+var discrip1 = new Array("Ö÷ÎÔÐ§¹ûÍ¼","Æð¾ÓÊÒÐ§¹ûÍ¼","²ÍÌüÐ§¹ûÍ¼");
 
+var picsFandong1 = new Array("garden.jpg","keting_gdos.jpg","keting_xgd.jpg","");
+var discripFD1 = new Array("»¨Ô°","¿ÍÌü--¹ÅµäÅ·Ê½·ç¸ñ","¿ÍÌü--ÐÂ¹Åµä·ç¸ñ");
 
 function findIndexClicked(idToFind)
 {
