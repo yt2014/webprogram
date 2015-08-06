@@ -44,8 +44,17 @@ function initCasesInfo()
 	    }
             	    
     }
-
+    
     casesInfo[0] = new caseInfo(19,picsArray,"fandong/xiaochunZuopin/DongAnYangban/Xiaoguo/");
+
+    //picsArray.length = 0;
+    picsArray1 = new Array();
+    picinfo_one = new picInfo("cateen.jpg","²ÍÌü");
+    picsArray1[0] = picinfo_one;
+    picinfo_one = new picInfo("keting.jpg","¿ÍÌü");
+    picsArray1[1] = picinfo_one;
+
+    casesInfo[1] = new caseInfo(2,picsArray1,"fandong/xiaochunZuopin/DongAnYangban/LiZhai/");
 }
 
 var picsXiaoChun1 = new Array("mainbed.jpg","main.jpg","cateen.jpg");
@@ -108,7 +117,7 @@ $(document).ready(function(){
 
 	initCasesInfo();
 
-//	alert(casesInfo[0].pics[0].pic);
+	//alert(casesInfo[1].pics[0].pic);
 
 	$(".link_imgs").click(
         function (event) {
@@ -147,7 +156,7 @@ $(document).ready(function(){
 		    // alert(casesInfo[indexFound].pics[currentPictureIndex].pic);
 		    var picInfoOne = casesInfo[currentCaseIndex].pics[currentPictureIndex];
 		    var fullPath = casesInfo[currentCaseIndex].pathname + picInfoOne.pic;
-		   // alert(fullPath);
+		    //alert(fullPath);
                      $("#picture_area").css("background","url(" + fullPath + ")");
                     //  alert(caseClicked);
 		     $("#text_left").empty();
