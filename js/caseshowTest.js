@@ -83,6 +83,16 @@ function initCasesInfo()
 
     casesInfo[2] = new caseInfo(22,picsArray2,"fandong/fandongZuopin/");
 
+    picsArray3 = new Array();
+    for(i=0;i<4;i++)
+    {
+	
+            picinfo_one = new picInfo(picsXC2[i],disXC2[i]);
+            picsArray3[i] = picinfo_one;
+    }
+
+    casesInfo[3] = new caseInfo(4,picsArray3,"fandong/xiaochunZuopin/hyyy/");
+
 }
 
 var picsXiaoChun1 = new Array("mainbed.jpg","main.jpg","cateen.jpg");
@@ -97,6 +107,9 @@ var discripFD1 = new Array("花园","客厅--古典欧式风格","客厅--新古典风格","客厅-
 		          "1","2","3","4","5","6","7",
 			  "1","2","3","4",
 			  "包间","大厅","儿童房","老人房","美式庄园","书房");
+
+var picsXC2 = new Array("keting.jpg","shufang.jpg","zhuwei.jpg","zhuwo.jpg");
+var disXC2  = new Array("客厅","书房","主卫","主卧");
 
 function findIndexClicked(idToFind)
 {
