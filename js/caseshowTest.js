@@ -10,6 +10,10 @@ var picsArray = new Array();
 var currentCaseIndex = -1;
 var currentPictureIndex = 0;
 
+function getURLParameter(name) {
+    return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null;
+}
+
 function caseInfo(num_pics,pics,pathname)
 {
    this.num_pics = num_pics;
@@ -136,6 +140,10 @@ $(document).ready(function(){
 	
 //	alert("ready height is "+$(document).innerHeight());
 //	$("#div_top").height(80);
+
+        //var id = $.url().param('id');
+		
+		
 	$("body").width($(document).innerWidth());
 //        $("#div_body").height(400);
 //
@@ -166,6 +174,35 @@ $(document).ready(function(){
         $("#text_total").empty();
 
 	initCasesInfo();
+	
+	var id = getURLParameter('id');
+		if(id!=null)
+		{
+			//alert(Number(id));
+			caseClicked = document.getElementById(rectArray[Number(id)]);
+			alert(caseClicked);
+			
+			 $(caseClicked).css("fill-opacity","0.1");
+                     $(caseClicked).siblings("text").css("visibility","visible");
+
+	             $("#text_total").load(caseTextArray[Number(id)]);
+                     currentCaseIndex = Number(id);
+		     currentPictureIndex = 0;
+		    // alert(casesInfo[indexFound].pics[currentPictureIndex].pic);
+		    var picInfoOne = casesInfo[currentCaseIndex].pics[currentPictureIndex];
+		    var fullPath = casesInfo[currentCaseIndex].pathname + picInfoOne.pic;
+		    //alert(fullPath);
+                     $("#picture_area").css("background","url(" + fullPath + ")");
+                    //  alert(caseClicked);
+		     $("#text_left").empty();
+
+                     $("#text_left").append(picInfoOne.descrip);
+			
+		}
+		else
+		{
+			//alert("no id");
+		}
 
 	//alert(casesInfo[1].pics[0].pic);
 
