@@ -2,7 +2,7 @@
 var caseClicked = 0;
 
 var caseTextArray = new Array("case1.txt","case2.txt","case3.txt","case4.txt");
-var rectArray = new Array("rect_shortImg1","rect_shortImg2","rect_shortImg3","rect_shortImg4");
+var rectArray = new Array("rect_shortImg1","rect_shortImg2","rect_shortImg3","rect_shortImg4","rect_shortImg5");
 
 var casesInfo = new Array();
 var picsArray = new Array();
@@ -97,6 +97,18 @@ function initCasesInfo()
 
     casesInfo[3] = new caseInfo(4,picsArray3,"fandong/xiaochunZuopin/hyyy/");
 
+    picsArray4 = new Array();
+    for(i=0;i<17;i++)
+    {
+	    var picname = (i+1).toString() +  ".jpg";
+            var disc = "实景图" +  (i+1).toString(); 
+	    picinfo_one = new picInfo(picname,disc);
+            picsArray4[i] = picinfo_one;
+
+    }
+
+   casesInfo[4] = new caseInfo(17,picsArray4,"fandong/xiaochunZuopin/yrtz/");
+
 }
 
 var picsXiaoChun1 = new Array("mainbed.jpg","main.jpg","cateen.jpg");
@@ -118,13 +130,14 @@ var disXC2  = new Array("客厅","书房","主卫","主卧");
 function findIndexClicked(idToFind)
 {
    var i=0;
-   for(i=0;i<4;i++)
+   var num_cases = rectArray.length;
+   for(i=0;i<num_cases;i++)
    {
       if(idToFind==rectArray[i])
 	      break;
    }
 
-   if(i==4)
+   if(i==num_cases)
    {
       return -1;
    }
@@ -161,15 +174,15 @@ $(document).ready(function(){
 
         var width_picturesShow = $("#picturesShow").width();
        // alert("picshow width: "+width_picturesShow);       
-        $("#pic_links").css("margin-left",(width_picturesShow-576)/2);
+        $("#pic_links").css("margin-left",(width_picturesShow-600)/2);
 
-        $("#pic_links").css("margin-right",(width_picturesShow-576)/2);
+        $("#pic_links").css("margin-right",(width_picturesShow-600)/2);
 
 	$("#one_display").css("margin-left",(width_picturesShow-800)/2);
 
 	$("#one_display").css("margin-right",(width_picturesShow-800)/2);
 
-	$(".svg_shortImg text").css("visibility","hidden");
+	$(".svg_shortImg text").css("fill","#444444");
 
         $("#text_total").empty();
 
@@ -183,7 +196,7 @@ $(document).ready(function(){
 			alert(caseClicked);
 			
 			 $(caseClicked).css("fill-opacity","0.1");
-                     $(caseClicked).siblings("text").css("visibility","visible");
+                     $(caseClicked).siblings("text").css("fill","white");
 
 	             $("#text_total").load(caseTextArray[Number(id)]);
                      currentCaseIndex = Number(id);
@@ -205,6 +218,8 @@ $(document).ready(function(){
 		}
 
 	//alert(casesInfo[1].pics[0].pic);
+	//
+        //$("#short_imgs").scrollLeft(120);
 
 	$(".link_imgs").click(
         function (event) {
@@ -221,35 +236,37 @@ $(document).ready(function(){
 		      // alert(indexFound);
 		       if(indexFound!=-1)
 		       {
-		     if(caseClicked==0)
-	             {
-	              caseClicked = event.target;
-		      //$(caseClicked).css("fill-opacity","0.1");
-		     }
-	             else if(caseClicked!=event.target)
-	             {
-                          $(caseClicked).css("fill-opacity","0.5");
-                          $(caseClicked).siblings("text").css("visibility","hidden");
-			  caseClicked = event.target;
-		          
+		          if(caseClicked==0)
+	                  {
+	                     caseClicked = event.target;
+		             //$(caseClicked).css("fill-opacity","0.1");
+		          }
+	                  else if(caseClicked!=event.target)
+	                  {
+                             $(caseClicked).css("fill-opacity","0.5");
+                             $(caseClicked).siblings("text").css("fill","#444444");
+			     caseClicked = event.target;
+		          }
+		          $(caseClicked).css("fill-opacity","0.1");
+                          $(caseClicked).siblings("text").css("fill","white");
 
-	             }
-		     $(caseClicked).css("fill-opacity","0.1");
-                     $(caseClicked).siblings("text").css("visibility","visible");
+	                  $("#text_total").load(caseTextArray[indexFound]);
+                          currentCaseIndex = indexFound;
+		          currentPictureIndex = 0;
+		          // alert(casesInfo[indexFound].pics[currentPictureIndex].pic);
+		          var picInfoOne = casesInfo[currentCaseIndex].pics[currentPictureIndex];
+		          var fullPath = casesInfo[currentCaseIndex].pathname + picInfoOne.pic;
+		          //alert(fullPath);
+                          $("#picture_area").css("background","url(" + fullPath + ")");
+                          //  alert(caseClicked);
+		          $("#text_left").empty();
 
-	             $("#text_total").load(caseTextArray[indexFound]);
-                     currentCaseIndex = indexFound;
-		     currentPictureIndex = 0;
-		    // alert(casesInfo[indexFound].pics[currentPictureIndex].pic);
-		    var picInfoOne = casesInfo[currentCaseIndex].pics[currentPictureIndex];
-		    var fullPath = casesInfo[currentCaseIndex].pathname + picInfoOne.pic;
-		    //alert(fullPath);
-                     $("#picture_area").css("background","url(" + fullPath + ")");
-                    //  alert(caseClicked);
-		     $("#text_left").empty();
-
-                     $("#text_left").append(picInfoOne.descrip);
-                     }
+                          $("#text_left").append(picInfoOne.descrip);
+                      }
+	              else
+		      {
+                          caseClicked = 0;
+		      }
 	            }
 		             );
 
@@ -257,7 +274,7 @@ $(document).ready(function(){
 	$(".svg_shortImg").mouseover(
         function (event) {
 		     // alert(event.target);
-	              $(event.target).siblings("text").css("visibility","visible");
+	              $(event.target).siblings("text").css("fill","white");
                      // alert(caseClicked);
 
 	            }
@@ -270,7 +287,7 @@ $(document).ready(function(){
 		     //alert(caseClicked);
 		     if(event.target!=caseClicked)
 	             {
-	                 $(event.target).siblings("text").css("visibility","hidden");
+	                 $(event.target).siblings("text").css("fill","#444444");
 		     }
                      // alert(caseClicked);
 
@@ -347,10 +364,31 @@ $(document).ready(function(){
 		             ); 
 
 
-       
+	$("#left_button").click(
+        function (event) {
+		      event.preventDefault();
+		      event.stopPropagation();
+		     // alert(event.target);
 
+	            //  $(event.target).siblings("text").css("visibility","visible");
+		      $("#short_imgs").scrollLeft(-120);
+                     // alert(caseClicked);
 
-	
+	            }
+		             );
+
+	$("#right_button").click(
+        function (event) {
+		      event.preventDefault();
+		      event.stopPropagation();
+		     // alert(event.target);
+
+	            //  $(event.target).siblings("text").css("visibility","visible");
+		      $("#short_imgs").scrollLeft(120);
+                     // alert(caseClicked);
+
+	            }
+		             );
       
 });
 

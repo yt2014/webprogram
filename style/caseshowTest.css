@@ -182,7 +182,7 @@ a{
     height:170px;
     width:576px;
     margin-top:20px;
-  //  background-color:yellow;
+    //background-color:yellow;
 }
 #left_button
 {
@@ -232,6 +232,26 @@ a{
 {
     background:url("../pictures/img4.jpg");
     //background-color:red;
+}
+#shortImg5
+{
+   background:url("../pictures/img5.jpg");
+}
+
+#short_imgs
+{
+	width:480px;
+	height:120px;
+	overflow:hidden;
+	background-color:green;
+	padding:0px;
+	margin:0px;
+	float:left;
+}
+#long_div
+{
+      width:600px;
+      height:120px;
 }
 
 #right_button
