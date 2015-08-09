@@ -193,7 +193,7 @@ $(document).ready(function(){
 		{
 			//alert(Number(id));
 			caseClicked = document.getElementById(rectArray[Number(id)]);
-			alert(caseClicked);
+		//	alert(caseClicked);
 			
 			 $(caseClicked).css("fill-opacity","0.1");
                      $(caseClicked).siblings("text").css("fill","white");
