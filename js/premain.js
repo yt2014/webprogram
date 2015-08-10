@@ -4,6 +4,23 @@ var numClicked = 0;
 $(document).ready(function(){
   // alert("in function");
    numClicked = 0;
+
+   var widthpa1 = $("#pa1").width();
+  // alert("pa1 width: "+widthpa1);
+
+   var widthDoc =  $(document).innerWidth();
+
+   var Width_toMove = (widthDoc - widthpa1)/2;
+
+   $("#pa1").animate(
+       {
+          left:Width_toMove
+       },
+       "slow"
+       );
+
+
+
    $(document).click(
 	   function(){
 	  // alert("body clicked"+numClicked);
