@@ -39,7 +39,7 @@ function timedPrint()
 	}
 	else
 	{
-           t=setTimeout("timedPrint()",400);
+           t=setTimeout("timedPrint()",150);
 	}
 
 }
@@ -91,7 +91,8 @@ $(document).ready(function(){
    lineIndex = 0;
    count = 0;
    strLen = strArray[lineIndex].length;
-   timedPrint();
+   t=setTimeout("timedPrint()",1000);
+  // timedPrint();
   // $(textLineArray[0]).empty();
    //strArray[0] = strArray[0].replace(/(^\s*)|(\s*$)/g, "");
    //alert(strArray[0] + strArray[0].length);
