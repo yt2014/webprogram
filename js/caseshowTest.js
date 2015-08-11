@@ -161,13 +161,13 @@ $(document).ready(function(){
 //        $("#div_body").height(400);
 //
       // alert(($(document).innerHeight()-300).toString()); 
-       if(($(document).innerHeight()-200)>550)
+       if(($(document).innerHeight()-200)>750)
        {
 	    $("#div_body").height($(document).innerHeight()-200);
        }
        else
        {
-            $("#div_body").height(550);
+            $("#div_body").height(750);
        }
 //	$("#div_buttom").height($(document).innerHeight()*0.1);
 //alert("doc ready");
@@ -178,9 +178,9 @@ $(document).ready(function(){
 
         $("#pic_links").css("margin-right",(width_picturesShow-600)/2);
 
-	$("#one_display").css("margin-left",(width_picturesShow-800)/2);
+	$("#one_display").css("margin-left",(width_picturesShow-910)/2);
 
-	$("#one_display").css("margin-right",(width_picturesShow-800)/2);
+	$("#one_display").css("margin-right",(width_picturesShow-910)/2);
 
 	$(".svg_shortImg text").css("fill","#444444");
 
