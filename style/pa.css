@@ -27,7 +27,9 @@ a
 {
 	padding-top:2%;
 	text-align:center;
-	display:none;
+	//display:none;
+	width:74px;
+	position:relative;
 }
 
 #pb1
@@ -54,7 +56,7 @@ position:relative;
 #pb4
 {
   //display:none;
-  width:82px;
+  width:85px;
   position:relative;
 }
 

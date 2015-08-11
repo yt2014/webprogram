@@ -1,21 +1,47 @@
 var numClicked = 0;
 
-var textLineArray = new Array("#pb1","#pb2","#pb3","#pb4","#pb5","#pb6");
+var textLineArray = new Array("#pb1","#pb2","#pb3","#pb4","#pb5","#pb6","#logo");
 //var widthArray = new Array();
 var strArray = new Array();
 var t;
 
 var count=0;
 var strLen;
+var lineIndex = 0;
+var onelineFinished;
 function timedPrint()
 {
 //	alert(strArray[0]);
-       $(textLineArray[0]).append(strArray[0][count]);
-       count=count+1;
-       if(count<=strLen)    
-          t=setTimeout("timedPrint()",500);
+       if(onelineFinished==1)
+       {
+          lineIndex = lineIndex + 1;
+          strLen = strArray[lineIndex].length;
+	  count = 0;
+          onelineFinished = 0;
+	 // alert(strArray[lineIndex]);
+       }
        else
-          clearTimeout(t);
+       {
+          $(textLineArray[lineIndex]).append(strArray[lineIndex][count]);
+          count=count+1;
+          if(count>strLen)    
+          {
+              onelineFinished = 1; 
+              $(textLineArray[lineIndex]).css("text-align","center");
+          }
+       }
+
+        if((lineIndex==5)&&(onelineFinished==1))
+	{
+	     clearTimeout(t);
+	     $("#logo").css("display","");
+               
+	}
+	else
+	{
+           t=setTimeout("timedPrint()",400);
+	}
+
 }
 
 $(document).ready(function(){
@@ -27,7 +53,10 @@ $(document).ready(function(){
 
    var widthDoc =  $(document).innerWidth();
 
+   $("body").height( $(document).innerHeight());
+
    var Width_toMove = (widthDoc - widthpa1)/2;
+   $("#logo").css("display","none");
 
    $("#pa1").animate(
        {
@@ -47,16 +76,25 @@ $(document).ready(function(){
      $(textLineArray[i]).css("left",Width_toMove);
     // $(textLineArray[i]).css("width","0px");
      strArray[i] =  $(textLineArray[i]).text();
+     $(textLineArray[i]).empty();
+     $(textLineArray[i]).css({"font-size":"20px","padding-top":"2%"});
+      strArray[i] = strArray[i].replace(/(^\s*)|(\s*$)/g, "");
        
    }
-   $(textLineArray[0]).empty();
-   strArray[0] = strArray[0].replace(/(^\s*)|(\s*$)/g, "");
+    var widthlogo = $(textLineArray[i]).width();
+     Width_toMove = (widthDoc - widthlogo)/2;
+    $(textLineArray[i]).css("left",Width_toMove);
+
+
+
+   onelineFinished = 0;
+   lineIndex = 0;
+   count = 0;
+   strLen = strArray[lineIndex].length;
+   timedPrint();
+  // $(textLineArray[0]).empty();
+   //strArray[0] = strArray[0].replace(/(^\s*)|(\s*$)/g, "");
    //alert(strArray[0] + strArray[0].length);
-
-    strLen = strArray[0].length;
-    timedPrint();
-
-    
 
     
 
