@@ -1,5 +1,22 @@
 var numClicked = 0;
 
+var textLineArray = new Array("#pb1","#pb2","#pb3","#pb4","#pb5","#pb6");
+//var widthArray = new Array();
+var strArray = new Array();
+var t;
+
+var count=0;
+var strLen;
+function timedPrint()
+{
+//	alert(strArray[0]);
+       $(textLineArray[0]).append(strArray[0][count]);
+       count=count+1;
+       if(count<=strLen)    
+          t=setTimeout("timedPrint()",500);
+       else
+          clearTimeout(t);
+}
 
 $(document).ready(function(){
   // alert("in function");
@@ -19,12 +36,38 @@ $(document).ready(function(){
        "slow"
        );
 
+   var widthpb1 = $("#pb1").width();
+   
+   var  i = 0;
+   var widthpb = 0;
+   for(i=0;i<6;i++)
+   {
+     widthpb = $(textLineArray[i]).width();
+     Width_toMove = (widthDoc - widthpb)/2;
+     $(textLineArray[i]).css("left",Width_toMove);
+    // $(textLineArray[i]).css("width","0px");
+     strArray[i] =  $(textLineArray[i]).text();
+       
+   }
+   $(textLineArray[0]).empty();
+   strArray[0] = strArray[0].replace(/(^\s*)|(\s*$)/g, "");
+   //alert(strArray[0] + strArray[0].length);
+
+    strLen = strArray[0].length;
+    timedPrint();
+
+    
+
+    
+
+  //  $(textLineArray[0]).empty();
+  //  $(textLineArray[0]).append(strArray[0][0]);
 
 
-   $(document).click(
+  /* $(document).click(
 	   function(){
 	  // alert("body clicked"+numClicked);
-          /* switch(numClicked)
+           switch(numClicked)
            {
              case 0:
              {
@@ -56,7 +99,7 @@ $(document).ready(function(){
              default:
 	     break;
  
-}*/
+}
    if(numClicked==0)
 {
 //	alert("clicked number is 0");
@@ -109,6 +152,6 @@ else if(numClicked==5)
 }
 
 
-	   });
+	   });*/
 
 });

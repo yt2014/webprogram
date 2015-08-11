@@ -32,30 +32,42 @@ a
 
 #pb1
 {
-   display:none;
+//   display:none;
+width:180px;
+position:relative;
 }
 
 #pb2
 {
-  display:none;
+  //display:none;
+  width:100px;
+  position:relative;
 }
 
 #pb3
 {
-  display:none;
+  //display:none;
+  width:80px;
+  position:relative;
 }
 
 #pb4
 {
-  display:none;
+  //display:none;
+  width:82px;
+  position:relative;
 }
 
 #pb5
 {
-  display:none;
+ // display:none;
+ width:220px;
+ position:relative;
 }
 
 #pb6
 {
-  display:none;
+  //display:none;
+  width:140px;
+  position:relative;
 }
