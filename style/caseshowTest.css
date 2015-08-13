@@ -187,14 +187,14 @@ a{
 #left_button
 {
    float:left;
-   //background:url("../pictures/left_48.ico");
+   //background:url("../pictures/ico_left.gif");
    width:20px;
-   padding-top:14px;
+   padding-top:4px;
    height:30px;
   // background-color:#AAAAAA;
    margin-top:8px;
    //margin-bottom:8px;
-   border:1px #AAAAAA solid;
+ //  border:1px #AAAAAA solid;
 }
 
 .short_img
@@ -260,12 +260,12 @@ a{
 #right_button
 {
    float:left;
-   //background:url("../pictures/left_48.ico");
+   //background:url("../pictures/ico_right.gif");
    width:20px;
-   padding-top:14px;
+   padding-top:4px;
    height:30px;
   // background-color:white;
-   border:solid 1px #AAAAAA; 
+   //border:solid 1px #AAAAAA; 
    margin-top:8px;
    
 }
