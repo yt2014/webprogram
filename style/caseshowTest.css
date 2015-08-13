@@ -180,7 +180,7 @@ a{
 #pic_links
 {
     height:170px;
-    width:576px;
+    width:700px;
     margin-top:30px;
     //background-color:yellow;
 }
@@ -188,10 +188,13 @@ a{
 {
    float:left;
    //background:url("../pictures/left_48.ico");
-   width:48px;
-   padding-top:36px;
-   height:84px;
-   background-color:white;
+   width:20px;
+   padding-top:14px;
+   height:30px;
+  // background-color:#AAAAAA;
+   margin-top:8px;
+   //margin-bottom:8px;
+   border:1px #AAAAAA solid;
 }
 
 .short_img
@@ -240,7 +243,7 @@ a{
 
 #short_imgs
 {
-	width:480px;
+	width:430px;
 	height:60px;
 	overflow:hidden;
 	//background-color:green;
@@ -258,10 +261,12 @@ a{
 {
    float:left;
    //background:url("../pictures/left_48.ico");
-   width:48px;
-   padding-top:36px;
-   height:84px;
-   background-color:white;
+   width:20px;
+   padding-top:14px;
+   height:30px;
+  // background-color:white;
+   border:solid 1px #AAAAAA; 
+   margin-top:8px;
    
 }
 
@@ -335,4 +340,32 @@ a{
    height:100%;
    float:left;
    //background-color:blue;
+}
+
+#previous_case
+{
+    width:80px;
+    height:60px;
+    float:left;
+    background-color:red;
+    margin-right:5px;
+}
+#in_link_pre_case
+{
+    width:80px;
+    height:60px;
+}
+
+#next_case
+{
+    width:80px;
+    height:60px;
+    float:left;
+    background-color:red;
+    margin-left:5px;
+}
+#in_link_next_case
+{
+    width:80px;
+    height:60px;
 }
