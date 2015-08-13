@@ -13,6 +13,7 @@
 	//background-color:red;
 	text-align:center;
         padding-top:90px;
+//	padding-bottom:50px;
 }
 
 #div_body_middle
@@ -23,6 +24,7 @@
 	height:100%;
 	color:white;
 	background-color:#dddddd;
+	padding-bottom:50px;
         //float:none;
 }
 

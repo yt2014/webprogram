@@ -181,7 +181,7 @@ a{
 {
     height:170px;
     width:576px;
-    margin-top:20px;
+    margin-top:30px;
     //background-color:yellow;
 }
 #left_button
@@ -196,12 +196,12 @@ a{
 
 .short_img
 {
-   width:120px;
-   height:120px;
+   width:80px;
+   height:60px;
   // border-color:black;
   float:left;
   padding:0px;
-  margin:0px;
+  margin-left:5px;
 }
 
 #shortImg1
@@ -212,8 +212,8 @@ a{
 
 .svg_shortImg
 {
-    width:120px;
-    height:120px;
+    width:80px;
+    height:60px;
    // visibility:hidden;
 }
 
@@ -241,7 +241,7 @@ a{
 #short_imgs
 {
 	width:480px;
-	height:120px;
+	height:60px;
 	overflow:hidden;
 	//background-color:green;
 	padding:0px;

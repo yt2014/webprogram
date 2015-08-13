@@ -5,7 +5,7 @@ $(document).ready(function(){
 //	$("#div_top").height(80);
 	$("body").width($(document).innerWidth());
 //        $("#div_body").height(400);
-	$("#div_body").height($(document).innerHeight()-200);
+	//$("#div_body").height($(document).innerHeight()-200);
 //	$("#div_buttom").height($(document).innerHeight()*0.1);
 //alert("doc ready");
 
@@ -54,11 +54,12 @@ $(document).ready(function(){
 			       var text7 = $("<span><br/>&nbsp;&nbsp;三，工程管理：</span>");
 			       text7.css("font-weight","bold");   
 
+			      $("#text_area").empty();
 			      $("#text_area").css("text-wrap","normal");
 			      $("#text_area").css("width","100%");
                               $("#text_area").css("text-align","left");
-			      $("#text_area").css("line-height","30px");
-                              $("#text_area").empty();
+			      $("#text_area").css("line-height","50px");
+                              
 			      $("#text_area").append(str1,text2,str3,text4,text5,str5,text6,str6,text7,str7);
                 }
 	});
