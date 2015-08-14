@@ -173,7 +173,7 @@ $(document).ready(function(){
 //alert("doc ready");
 
         var width_picturesShow = $("#picturesShow").width();
-        alert("picshow width: "+width_picturesShow);       
+        //alert("picshow width: "+width_picturesShow);       
         $("#pic_links").css("margin-left",(width_picturesShow-640)/2);
 
         $("#pic_links").css("margin-right",(width_picturesShow-640)/2);

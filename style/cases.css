@@ -1,0 +1,386 @@
+@CHARSET "UTF-8";
+
+*{
+	margin:0;
+	padding:0;
+	
+}
+
+#div_body
+{
+	width:100%;
+	height:800px;
+	//background-color:red;
+	text-align:center;
+        padding-top:90px;
+}
+
+
+
+#line_svg
+{
+    width:100%;
+    height:10px;
+   // background-color:red;
+}
+
+#body_context
+{
+   width:100%;
+   height:85%;
+  // background-color:green;
+  color:#666666;
+}
+
+
+a{
+    text-decoration:none;	
+}
+
+
+#div_top
+{
+	background-color:#aaaaaa;
+   color:white;
+   height:80px;
+   width:100%;
+  vertical-align:middle;
+  padding-top:10px;
+  position:fixed;
+}
+
+#logo_img
+{
+   float:left;
+   margin-left:20px;
+   margin-right:5px;
+   padding-top:7px;
+   width:60px;
+   height:50px;
+   //background-color:white;
+}
+
+#logo_img_bottom
+{
+   float:left;
+   margin-left:20px;
+   margin-right:5px;
+   padding-top:7px;
+   width:60px;
+   height:50px;
+}
+
+.logo_svg
+{
+   //padding-left:20px;
+  // float:left;
+   width:100%;
+   height:100%;
+}
+
+.logo_text
+{
+   padding-top:10px;
+   float:left;
+   font-size:20px;
+   font-weight:bold;
+}
+
+#navigator
+{
+   float:right;
+}
+
+#navigator a
+{
+  float:left;
+  font-size:25px;
+  padding-top:20px;
+  padding-right:20px;
+}
+
+#navigator a
+{
+   color:#dcdcdc;
+}
+
+#navigator a:hover
+{
+   color:white;
+}
+
+
+#div_buttom
+{
+   background-color:#666666;
+   color:white;
+  // height:90px;
+  // width:100%;
+   vertical-align:middle;
+   padding-top:10px;
+   height:100px;
+   width:100%;
+  // height:90px;
+}
+
+
+
+#bottom_middle
+{
+    width:74%;
+    padding-left:13%;
+    padding-right:13%;
+}
+
+#context_bottom
+{
+   float:right;
+   //text-align:center;
+}
+
+#copyright
+{
+    width:100%;	
+   // background-color:red;
+    text-align:center;
+    float:left;
+    padding-top:10px;
+}
+
+#thispage
+{
+   color:#cc0000;
+}
+
+
+
+#left_column
+{
+	height:100%;
+	width:5%;
+//	background-color:blue;
+	text-align:center;
+	float:left;
+	background-color:#dcdcdc;
+}
+
+#picturesShow
+{
+    float:left;
+    width:90%;
+    height:100%;
+    //background-color:#dcdcdc;
+}
+
+#body_right
+{
+    height:100%;
+    width:5%;
+   // background-color:blue;
+    float:left;
+    background-color:#dcdcdc;
+}
+
+#pic_links
+{
+    height:170px;
+    width:700px;
+    margin-top:30px;
+    //background-color:yellow;
+}
+#left_button
+{
+   float:left;
+   //background:url("../pictures/ico_left.gif");
+   width:20px;
+   padding-top:4px;
+   height:30px;
+  // background-color:#AAAAAA;
+   margin-top:8px;
+   //margin-bottom:8px;
+ //  border:1px #AAAAAA solid;
+}
+
+.short_img
+{
+   width:80px;
+   height:60px;
+  // border-color:black;
+  float:left;
+  padding:0px;
+  margin-left:5px;
+}
+
+#shortImg1
+{
+    background:url("../pictures/img1.jpg");
+    //background-color:red;
+}
+
+.svg_shortImg
+{
+    width:80px;
+    height:60px;
+   // visibility:hidden;
+}
+
+#shortImg2
+{
+    background:url("../pictures/img2.jpg");
+    //background-color:red;
+}
+
+#shortImg3
+{
+    background:url("../pictures/img3.jpg");
+    //background-color:red;
+}
+#shortImg4
+{
+    background:url("../pictures/img4.jpg");
+    //background-color:red;
+}
+#shortImg5
+{
+   background:url("../pictures/img5.jpg");
+}
+
+#short_imgs
+{
+	width:430px;
+	height:60px;
+	overflow:hidden;
+	//background-color:green;
+	padding:0px;
+	margin:0px;
+	float:left;
+}
+#long_div
+{
+      width:600px;
+      height:120px;
+}
+
+#right_button
+{
+   float:left;
+   //background:url("../pictures/ico_right.gif");
+   width:20px;
+   padding-top:4px;
+   height:30px;
+  // background-color:white;
+   //border:solid 1px #AAAAAA; 
+   margin-top:8px;
+   
+}
+
+#one_display
+{
+   width:910px;
+   height:500px;
+  // background-color:white;
+   padding-top:0px;
+   margin-top:0px;
+   //background:url("../pictures/keting1.jpg");
+}
+
+#move_left_one
+{
+  // background-color:red;
+}
+
+#svg_left_button_one
+{
+   width:50px;
+   height:50px;
+  // background:url("../pictures/left_48.ico");
+   position:relative;
+   left:-300px;
+   top:220px;
+  // float:left;
+}
+
+#svg_right_button_one
+{
+   width:50px;
+   height:50px;
+  // background:url("../pictures/left_48.ico");
+   position:relative;
+   left:300px;
+   top:220px;
+  // float:left;
+
+}
+
+
+#picture_area
+{
+    width:710px;
+    height:100%;
+    float:left;
+    background:url("../pictures/keting1.jpg");
+}
+
+
+#previous_case
+{
+    width:80px;
+    height:60px;
+    float:left;
+    background-color:red;
+    margin-right:5px;
+}
+#in_link_pre_case
+{
+    width:80px;
+    height:60px;
+}
+
+#next_case
+{
+    width:80px;
+    height:60px;
+    float:left;
+    background-color:red;
+    margin-left:5px;
+}
+#in_link_next_case
+{
+    width:80px;
+    height:60px;
+}
+
+.pic_link
+{
+	float:left;
+}
+
+.designer_block .shortCase
+{
+	width:85px;
+	height:65px;
+	margin-left:10px;
+}
+
+
+.designer_block .photo
+{
+	width:220px;
+	height:300px;
+}
+
+.designer_position
+{
+	float:left;
+	width:250px;
+}
+.designer_Zuopin
+{
+	float:left;
+	width:250px;
+}
+.designer_Idea
+{
+	float:left;
+	width:250px;
+}
