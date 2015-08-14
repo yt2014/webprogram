@@ -1,5 +1,12 @@
 
 
+
+
+function scrolltop()
+{
+   document.body.scrollTop = 95;
+}
+
 $(document).ready(function(){
 	
 //	alert("ready height is "+$(document).innerHeight());
@@ -97,6 +104,10 @@ $(document).ready(function(){
 	       function(event)
 	       {
                   // alert(event.target);
+		 event.preventDefault();
+		   event.stopPropagation();
+                // alert(document.body.scrollTop);
+		// var pos = document.body.scrollTop;
 		   var tar_clicked = event.target;
                   // alert($(tar_clicked).attr("src"));
 		   var imgBack = "url('"+$(tar_clicked).attr("src")+"') top center no-repeat";
@@ -105,7 +116,13 @@ $(document).ready(function(){
                 $("#picture_area").css("background",imgBack); 
 		  // alert(tar_clicked)
 
+		//document.scrollTop = 120; 
+               // window.scrollTo(0,120);
+	    //   t=setTimeout("scrolltop()",50);
+               
 	       }
-	       ); 
+	       );
+
+      
 
 });
