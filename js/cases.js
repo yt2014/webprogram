@@ -1,7 +1,4 @@
 
-
-
-
 function scrolltop()
 {
    document.body.scrollTop = 95;
@@ -13,9 +10,14 @@ var designerID = 0;
 var pathCurrentCase = "";
 
 var currentCaseInfo = new caseInfo(); 
+var previousCaseInfo = new caseInfo();
+var nextCaseInfo = new caseInfo();
 
 var currentPicIndex = -1;
+var caseStartIndex = 0;
+var caseEndIndex = 0;
 
+var id_id = 0;
 function indexOfCurrentPic(picname)
 {
     var num = currentCaseInfo.num_pics;
@@ -36,6 +38,84 @@ function indexOfCurrentPic(picname)
     }
     
     return retVal;
+}
+
+function initShortImgsBlock(selectedCasInfo)
+{
+	$("#long_div").empty();
+
+        $("#long_div").addClass("css_long_div");
+
+	var numPics = selectedCasInfo.num_pics;
+
+	var widLongDiv = 94*numPics;
+	$("#long_div").width(widLongDiv);
+//	alert($("#long_div").width());
+
+       var strPathImg = selectedCasInfo.pathname; 
+       var i=0;
+       for(i=0;i<numPics;i++)
+       {
+
+	var divToAdd = $("<div></div>");
+	divToAdd.addClass("short_img");
+	var strId = "shortImgDiv"+(i+1).toString();
+	divToAdd.attr("id",strId);
+	var aToAdd = $("<a></a>");
+	aToAdd.addClass("link_imgs");
+	aToAdd.attr("href","#");
+	aToAdd.attr("class","link_imgs");///////
+	var imgToAdd = $("<img/>");
+	imgToAdd.addClass("imgAdd");
+	imgToAdd.attr("class","imgAdd");
+	var imgSrc = strPathImg + selectedCasInfo.pics[i].pic;//////
+	imgToAdd.attr("src",imgSrc);
+	var pToAdd = $("<p></p>");
+	var strP = (i+1).toString()+"/" + selectedCasInfo.num_pics.toString();
+	pToAdd.addClass("pAdd");
+        pToAdd.append(strP);
+       // alert(pToAdd);
+
+        aToAdd.append(imgToAdd,pToAdd);
+        divToAdd.append(aToAdd);
+        $("#long_div").append(divToAdd);
+       }
+       
+       var imgBackInit =  currentCaseInfo.pathname + currentCaseInfo.pics[0].pic;
+                          // alert(imgBack);
+       imgBackInit = "url('"+imgBackInit+"') top center no-repeat";
+			//  alert(imgBack); 
+       $("#picture_area").css("background",imgBackInit);
+       currentPicIndex = 0;
+       strId =  "#shortImgDiv" + (currentPicIndex+1).toString();
+       $(strId).css("border","solid #bb5500 2px");
+
+
+      $("#previous_case a img").attr("src",previousCaseInfo.pathname + previousCaseInfo.pics[0].pic);
+      $("#previous_case .pCaseName").text(previousCaseInfo.caseDesp);
+
+      $("#next_case a img").attr("src",nextCaseInfo.pathname + nextCaseInfo.pics[0].pic);
+      $("#next_case .pCaseName").text(nextCaseInfo.caseDesp);
+      $("#caseBrief").text(currentCaseInfo.caseDesp);
+}
+
+
+function setPreviousNext(id_current)
+{
+        var id_p = id_current - 1;
+	if(id_p<caseStartIndex)
+        {
+	   id_p = caseEndIndex;
+	   
+	}
+	previousCaseInfo = casesInfo[id_p];
+
+	var id_n = id_current + 1;
+	if(id_n>caseEndIndex)
+	{
+	   id_n = caseStartIndex;
+	}
+        nextCaseInfo = casesInfo[id_n];
 }
 
 $(document).ready(function(){
@@ -80,7 +160,7 @@ $(document).ready(function(){
         initCasesInfo();
         
         var id = getURLParameter('id');
-        var id_id = 0; 
+        //var id_id = 0; 
 	var total_num = casesInfo.length;
 
 		if(id!=null)
@@ -89,17 +169,23 @@ $(document).ready(function(){
 		   if((id_id >= (desinerInfo[0]+desinerInfo[1]))&&(id_id<total_num))
 		   {
                         designerID = 2;
-			numCasesDesigner = desinerInfo[2]; 
+			numCasesDesigner = desinerInfo[2];
+		        caseStartIndex = desinerInfo[0]+desinerInfo[1];	
+			caseEndIndex = total_num-1;
 		   }
 		   else if(id_id >= desinerInfo[0])
 		   {
 			  designerID = 1;
                           numCasesDesigner = desinerInfo[1]; 
+                          caseStartIndex = desinerInfo[0];
+                          caseEndIndex = desinerInfo[0]+desinerInfo[1] - 1;
 		   }
 		   else
 		   {
                           designerID = 0;
                           numCasesDesigner = desinerInfo[0];  
+                          caseStartIndex = 0;
+                          caseEndIndex = desinerInfo[0] - 1;
 		   }
 		   		
 		}
@@ -112,62 +198,24 @@ $(document).ready(function(){
 
         numPicsCurrentCase = casesInfo[id_id].num_pics;
 	pathCurrentCase = casesInfo[id_id].pathname; 
-	currentCaseInfo = casesInfo[id_id]; 
+	currentCaseInfo = casesInfo[id_id];
 
+        setPreviousNext(id_id);
         
 	//alert("current case " + currentCaseInfo);
-	$("#long_div").empty();
-
-        $("#long_div").addClass("css_long_div");
-
-	var widLongDiv = 94*numPicsCurrentCase;
-	$("#long_div").width(widLongDiv);
-//	alert($("#long_div").width());
-
-       var strPathImg = pathCurrentCase; 
-       var i=0;
-       for(i=0;i<numPicsCurrentCase;i++)
-       {
-
-	var divToAdd = $("<div></div>");
-	divToAdd.addClass("short_img");
-	var strId = "shortImgDiv"+(i+1).toString();
-	divToAdd.attr("id",strId);
-	var aToAdd = $("<a></a>");
-	aToAdd.addClass("aAdd");
-	aToAdd.attr({"href":"#","class":"link_imgs"});///////
-	var imgToAdd = $("<img/>");
-	imgToAdd.addClass("imgAdd");
-	var imgSrc = strPathImg + currentCaseInfo.pics[i].pic;//////
-	imgToAdd.attr("src",imgSrc);
-	var pToAdd = $("<p></p>");
-	var strP = (i+1).toString()+"/" + currentCaseInfo.num_pics.toString();
-	pToAdd.addClass("pAdd");
-        pToAdd.append(strP);
-       // alert(pToAdd);
-
-        aToAdd.append(imgToAdd,pToAdd);
-        divToAdd.append(aToAdd);
-        $("#long_div").append(divToAdd);
-       }
-
-       var imgBackInit =  currentCaseInfo.pathname + currentCaseInfo.pics[0].pic;
-                          // alert(imgBack);
-       imgBackInit = "url('"+imgBackInit+"') top center no-repeat";
-			//  alert(imgBack); 
-       $("#picture_area").css("background",imgBackInit);
-       currentPicIndex = 0;
-       strId =  "#shortImgDiv" + (currentPicIndex+1).toString();
-       $(strId).css("border","solid #bb5500 2px");
+	initShortImgsBlock(currentCaseInfo);
+       
  
-$("#caseBrief").text(currentCaseInfo.caseDesp);
+
 	$("#left_button").click(
 		function(event)
 		{
 		  event.preventDefault();
 		  event.stopPropagation();
 		  //  alert("scrollleft");
-		    $("#short_imgs").scrollLeft(-94); 
+		  var posScroll = $("#short_imgs").scrollLeft();
+		   
+		    $("#short_imgs").scrollLeft(posScroll-94); 
 		}
 		);
 
@@ -177,14 +225,15 @@ $("#caseBrief").text(currentCaseInfo.caseDesp);
 		   event.preventDefault();
 		   event.stopPropagation();
 		   // alert("scrollRight");
-		    $("#short_imgs").scrollLeft(94); 
+                   var posScroll = $("#short_imgs").scrollLeft();
+		    $("#short_imgs").scrollLeft(posScroll+94); 
 		}
 		);
 
-       $(".link_imgs").click(
+       $(".imgAdd").click(
 	       function(event)
 	       {
-                  // alert(event.target);
+                   alert(event.target);
 		 event.preventDefault();
 		   event.stopPropagation();
                 // alert(document.body.scrollTop);
@@ -271,6 +320,18 @@ $("#caseBrief").text(currentCaseInfo.caseDesp);
 
 			    strId =  "#shortImgDiv" + (currentPicIndex+1).toString();
 	                    $(strId).css("border","solid #bb5500 2px");
+                            
+			    if(currentPicIndex==0)
+			    {
+			       var posScroll = $("#short_imgs").scrollLeft();
+			       //alert(posScroll);
+			       $("#short_imgs").scrollLeft(0-posScroll);
+			    }
+			    else
+			    {
+			       var posScroll = $("#short_imgs").scrollLeft();
+                               $("#short_imgs").scrollLeft(94+posScroll);
+			    }
 
 			}
 			); 
@@ -300,11 +361,146 @@ $("#caseBrief").text(currentCaseInfo.caseDesp);
 			    strId =  "#shortImgDiv" + (currentPicIndex+1).toString();
 	                    $(strId).css("border","solid #bb5500 2px");
 
+			     if(currentPicIndex==currentCaseInfo.num_pics-1)
+			     {
+			        $("#short_imgs").scrollLeft(currentCaseInfo.num_pics*94);
+
+			     }
+			     else
+			     {
+                                 var posScroll =  $("#short_imgs").scrollLeft();
+                                  $("#short_imgs").scrollLeft(posScroll-94);
+			     } 
+
 			}
-			); 
+			);       
+
+	$("#previous_case a").click(
+			function(event)
+			{
+                           event.preventDefault();
+		           event.stopPropagation();
+		//	   alert("previous case");
+                           id_id = id_id - 1;
+			  if(id_id<caseStartIndex)
+                          {
+	                    id_id = caseEndIndex;
+			   
+	   
+	                  }
+	                   currentCaseInfo = casesInfo[id_id];
+
+                           setPreviousNext(id_id);
+        
+	                   //alert("current case " + currentCaseInfo);
+	                   initShortImgsBlock(currentCaseInfo);
+	                  
+
+			}
+			);
+
+      	$("#next_case a").click(
+			function(event)
+			{
+                           event.preventDefault();
+		           event.stopPropagation();
+		//	   alert("previous case");
+                           id_id = id_id + 1;
+			  if(id_id>caseEndIndex)
+                          {
+	                    id_id = caseStartIndex;			   
+	   
+	                  }
+	                   currentCaseInfo = casesInfo[id_id];
+
+                           setPreviousNext(id_id);
+        
+	                   //alert("current case " + currentCaseInfo);
+	                   initShortImgsBlock(currentCaseInfo);
+	                  
+
+			}
+			);
+
+         $("*").click(
+                       function(event)
+		       {
+			   //alert($(event.target).attr("class"));
+	         if($(event.target).attr("class")=="imgAdd")
+	         {
+	          event.preventDefault();
+		   event.stopPropagation();
+                // alert(document.body.scrollTop);
+		// var pos = document.body.scrollTop;
+		   var tar_clicked = event.target;
+                  // alert($(tar_clicked).attr("src"));
+		   var imgBack = "url('"+$(tar_clicked).attr("src")+"') top center no-repeat";
+		 //  alert(imgBack);
+		 var imgName = $(tar_clicked).attr("src");
+                 var indexa = imgName.lastIndexOf("/");
+		 var leng_str = imgName.length;
+
+		// alert("length:"+leng_str+" index:"+indexa);
+                 var picname = imgName.substring(indexa+1,leng_str);
+		// alert(picname);
+
+               var strId =  "#shortImgDiv" + (currentPicIndex+1).toString();
+		$(strId).css("border","solid #aaaaaa 2px");
 
 
+		indexa = indexOfCurrentPic(picname);
+		if(indexa!=-1)
+		{
+		    currentPicIndex = indexa;
+		}
+		else
+		{
+		    currentPicIndex = 0;
+		}
+	//	alert("pic index"+indexa);
+                $("#picture_area").css("background",imgBack); 
+		  // alert(tar_clicked)
 
-      
+		//document.scrollTop = 120; 
+               // window.scrollTo(0,120);
+	    //   t=setTimeout("scrolltop()",50);
+	        strId =  "#shortImgDiv" + (currentPicIndex+1).toString();
+		$(strId).css("border","solid #bb5500 2px");
+		 }
+	         else if($(event.target).attr("class")=="pAdd")
+		 {
+		     //alert($(event.target).text());
+                     event.preventDefault();
+		     event.stopPropagation();
+
+		     var strText = $(event.target).text();
+		     var indexa = Number(strText[0]) - 1;
+		    // alert(indexa);
+                     
+
+	          //   var imgBack = "url('"+$(tar_clicked).attr("src")+"') top center no-repeat";
+		 //  alert(imgBack);
+		 
+		// alert("length:"+leng_str+" index:"+indexa);
+                 var picname = currentCaseInfo.pathname + currentCaseInfo.pics[currentPicIndex].pic;
+		// alert(picname);
+
+                 var strId =  "#shortImgDiv" + (currentPicIndex+1).toString();
+		 $(strId).css("border","solid #aaaaaa 2px");
+
+	//	alert("pic index"+indexa);
+		var imgBack = "url('"+picname+"') top center no-repeat";
+                $("#picture_area").css("background",imgBack); 
+		  // alert(tar_clicked)
+
+		//document.scrollTop = 120; 
+               // window.scrollTo(0,120);
+	    //   t=setTimeout("scrolltop()",50);
+	        currentPicIndex = indexa;
+	        strId =  "#shortImgDiv" + (currentPicIndex+1).toString();
+		$(strId).css("border","solid #bb5500 2px");
+		 }
+		       }
+			 );
 
 });
