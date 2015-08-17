@@ -363,11 +363,38 @@ a{
     height:60px;
 }
 
+.pic_link_photo
+{
+	float:left;
+	width:220px;
+	height:300px;
+	overflow:hidden;
+}
+
 .pic_link
 {
 	float:left;
+	width:100px;
+	height:60px;
+	overflow:hidden;
+	margin-top:5px;
+	margin-left:2px;
 }
 
+
+.filter_photo
+{
+    width:220px;
+    height:300px;
+    position:relative;
+    z-index:2;
+    top:-305px;
+    background-color:gray;
+    opacity:0.5;
+    color:white;
+    visibility:hidden;
+
+}
 .designer_block .shortCase
 {
 	width:85px;
@@ -424,3 +451,6 @@ a{
     top:-20px;
     color:white;
 }
+
+
+
