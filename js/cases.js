@@ -233,7 +233,7 @@ $(document).ready(function(){
        $(".imgAdd").click(
 	       function(event)
 	       {
-                   alert(event.target);
+                  // alert(event.target);
 		 event.preventDefault();
 		   event.stopPropagation();
                 // alert(document.body.scrollTop);

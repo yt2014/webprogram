@@ -469,4 +469,42 @@ a{
 }
 
 
+.designer_block .designer_Idea
+{
+	width:235px;
+	float:left;
+	color:#444444;
+	line-height:25px;
+	padding-top:5px;
+	border:1px solid #cccccc;
+	padding-right:5px;
+}
+
+.designer_block .designer_position
+{
+	background-color:#bb5500;
+	width:240px;
+	float:left;
+	color:white;
+	font-weight:bold;
+//	text-align:left;
+	margin-top:10px;
+	padding-top:5px;
+	padding-bottom:5px;
+	line-height:25px;
+}
+
+.designer_block .designer_Zuopin
+{
+	width:235px;
+	float:left;
+	margin-top:5px;
+	text-align:left;
+	line-height:25px;
+	color:#444444;
+	border:1px solid #cccccc;
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-right:5px;
+}
 
