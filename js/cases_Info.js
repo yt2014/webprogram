@@ -4,6 +4,12 @@ var casesInfo = new Array();
 var currentCaseIndex = -1;
 var currentPictureIndex = 0;
 
+var desinerInfo = new Array(3,0,0);
+/*number of cases for TangXi is 2*/
+/*number of cases for XiaoChun is 0*/
+/*number of cases for Fandong is 0*/
+/*these values should be updated when new cases added*/
+
 function getURLParameter(name) {
     return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null;
 }
@@ -52,6 +58,22 @@ function initCasesInfo()
     
     casesInfo[1] = new caseInfo(3,picsArray1,"fandong/tangxiZuopin/ZhongliangXiangyun/","÷–¡∏œÈ‘∆");
 
+
+    var picsArray2 = new Array();
+    for(i=0;i<4;i++)
+    {
+	    
+       var picname = (i+1).toString() + ".jpg";
+       var disc = " µæ∞Õº" + (i+1).toString(); 
+       picinfo_one = new picInfo(picname,disc);
+       picsArray2[i] = picinfo_one;
+            	    
+    }
+    
+    casesInfo[2] = new caseInfo(4,picsArray2,"fandong/tangxiZuopin/Naichadian/","ƒÃ≤ËµÍ");
+
+
     //picsArray.length = 0;
+
     
 }

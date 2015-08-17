@@ -395,6 +395,22 @@ a{
     visibility:hidden;
 
 }
+
+.filter_shortcase
+{
+    width:100px;
+    height:60px;
+    position:relative;
+    z-index:2;
+    top:-68px;
+    background-color:gray;
+    opacity:0.5;
+    color:white;
+    visibility:hidden;
+
+}
+
+
 .designer_block .shortCase
 {
 	width:85px;
