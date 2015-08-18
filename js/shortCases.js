@@ -29,7 +29,7 @@ $(document).ready(function(){
 	   var linkPic = $("<a></a>");
 	   linkPic.attr({"class":"pic_link"});
 	   linkPic.addClass("pic_link");
-	   var strHref = "cases.html?id="+i.toString();
+	   var strHref = "Cases.html?id="+i.toString();
 	   linkPic.attr("href",strHref);
 
            var imgToAdd = $("<img/>");

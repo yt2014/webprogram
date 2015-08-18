@@ -108,6 +108,7 @@ function setPreviousNext(id_current)
 	   id_p = caseEndIndex;
 	   
 	}
+        //alert(id_p);
 	previousCaseInfo = casesInfo[id_p];
 
 	var id_n = id_current + 1;
@@ -116,6 +117,38 @@ function setPreviousNext(id_current)
 	   id_n = caseStartIndex;
 	}
         nextCaseInfo = casesInfo[id_n];
+}
+
+function setDesigner(designer_ID)
+{
+      var strDes = designerInfoArray[designer_ID].pathfolder + "1.txt";
+      //alert(strDes);
+      $.ajax({              url: strDes,
+                              dataType: 'text',
+			      //scriptCharset: 'GB2312',
+			      contentType: "utf-8", 
+                              success: function(data) {
+		//	      alert(data);
+
+			      var indexName = data.indexOf("姓名：",0);
+			      var indexPos = data.indexOf("职位：",indexName);
+			      var indexEx = data.indexOf("个人经历：",indexPos);
+			      var indexIdea = data.indexOf("设计理念：",indexEx);
+                              
+			      var strName = data.slice(indexName+3,indexPos);
+			      var strPos = data.slice(indexPos+3,indexEx);
+			      var strEx = data.slice(indexEx+5,indexIdea);
+			      var strIdea = data.slice(indexIdea+5,data.length);
+
+			      //alert(strIdea);
+			      //
+			      $("#designerName").text(strName);
+			      $("#designerPos").text(strPos);
+			      $("#designerIdea").text(strIdea);
+
+			      }
+            }
+	   );
 }
 
 $(document).ready(function(){
@@ -158,44 +191,49 @@ $(document).ready(function(){
 
      //  var css_long =   $("#long_div").css(); 
         initCasesInfo();
-        
+        initDesigners();
         var id = getURLParameter('id');
-        //var id_id = 0; 
+        id_id = 0; 
 	var total_num = casesInfo.length;
 
 		if(id!=null)
 		{
 		   id_id = Number(id);		   
-		   if((id_id >= (desinerInfo[0]+desinerInfo[1]))&&(id_id<total_num))
+		   if((id_id >= (designerInfoArray[0].numCases+designerInfoArray[1].numCases))&&(id_id<total_num))
 		   {
                         designerID = 2;
-			numCasesDesigner = desinerInfo[2];
-		        caseStartIndex = desinerInfo[0]+desinerInfo[1];	
+			numCasesDesigner = designerInfoArray[2].numCases;
+		        caseStartIndex = designerInfoArray[0].numCases+designerInfoArray[1].numCases;	
 			caseEndIndex = total_num-1;
 		   }
-		   else if(id_id >= desinerInfo[0])
+		   else if(id_id >= designerInfoArray[0].numCases)
 		   {
 			  designerID = 1;
-                          numCasesDesigner = desinerInfo[1]; 
-                          caseStartIndex = desinerInfo[0];
-                          caseEndIndex = desinerInfo[0]+desinerInfo[1] - 1;
+                          numCasesDesigner = designerInfoArray[1].numCases; 
+                          caseStartIndex = designerInfoArray[0].numCases;
+                          caseEndIndex = designerInfoArray[0].numCases+designerInfoArray[1].numCases - 1;
 		   }
 		   else
 		   {
                           designerID = 0;
-                          numCasesDesigner = desinerInfo[0];  
+                          numCasesDesigner = designerInfoArray[0].numCases;  
                           caseStartIndex = 0;
-                          caseEndIndex = desinerInfo[0] - 1;
+                          caseEndIndex = designerInfoArray[0].numCases - 1;
 		   }
 		   		
 		}
 		else
 		{
 			//alert("no id");
+			designerID = 0;
+                        numCasesDesigner = designerInfoArray[0].numCases;  
+                        caseStartIndex = 0;
+                        caseEndIndex = designerInfoArray[0].numCases - 1;
 
 		}
  
 
+        //alert(id_id);
         numPicsCurrentCase = casesInfo[id_id].num_pics;
 	pathCurrentCase = casesInfo[id_id].pathname; 
 	currentCaseInfo = casesInfo[id_id];
@@ -205,7 +243,7 @@ $(document).ready(function(){
 	//alert("current case " + currentCaseInfo);
 	initShortImgsBlock(currentCaseInfo);
        
- 
+        setDesigner(designerID);
 
 	$("#left_button").click(
 		function(event)
