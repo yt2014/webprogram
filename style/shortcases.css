@@ -271,3 +271,26 @@ a{
 	height:150px;
 //	background-color:red;
 }
+
+#pages_link li
+{
+    float:left;
+    margin-left:40px;
+
+}
+
+#pages_link
+{
+    width:100%;
+   // background-color:red;
+    float:left;
+    //text-align:center;
+    margin-top:50px;
+    margin-left:30%;
+
+}
+
+#pages_link a
+{
+    //text-align:center;
+}
