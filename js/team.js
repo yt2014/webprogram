@@ -30,5 +30,28 @@ $(document).ready(function(){
 
 	            }
 		             );
+
+	 $(".designer_block a").mouseover(
+		       function(event){
+		      // alert(event.target);
+                       $(event.target).siblings("div").css("visibility","visible");
+
+		       }
+		       );
+
+                $(".designer_block a").mouseout(
+		       function(event){
+		       //alert(event.target);
+		       if($(event.target).attr("class").search("filter")!=-1)
+		       {
+                          $(event.target).css("visibility","hidden");
+		       }
+		       else if($(event.target).attr("class").search("ptext")!=-1)
+		       {
+                           $(event.target).parents(".filter_shortcase").css("visibility","hidden");
+		       }
+
+		       }
+		       );
      
 });

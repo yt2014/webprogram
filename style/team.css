@@ -295,3 +295,62 @@ a{
 	border:1px solid #cccccc;
 	padding-right:5px;
 }
+
+
+.filter_photo
+{
+    width:222px;
+    height:268px;
+    position:relative;
+    z-index:2;
+    top:-272px;
+    //left:9px;
+    background-color:gray;
+    opacity:0.5;
+    color:white;
+    visibility:hidden;
+
+}
+
+.pic_link_photo
+{
+	float:left;
+	width:222px;
+	height:268px;
+	overflow:hidden;
+	margin-top:5px;
+	margin-left:8px;
+}
+
+.pic_link
+{
+	float:left;
+	//width:100px;
+	//height:60px;
+	//overflow:hidden;--
+	//margin-top:5px;
+	//margin-left:2px;
+
+	float:left;
+   width:95px;
+   height:70px;
+   margin-right:0px;
+   margin-left:10px;
+   margin-top:5px;
+}
+
+.filter_shortcase
+{
+    width:100px;
+    height:70px;
+    position:relative;
+    z-index:2;
+    top:-70px;
+    background-color:gray;
+    opacity:0.5;
+    color:white;
+    float:left;
+    margin-left:11px;
+    visibility:hidden;
+
+}
