@@ -149,6 +149,43 @@ function setDesigner(designer_ID)
 			      }
             }
 	   );
+
+    var photoName = designerInfoArray[designer_ID].pathfolder + "photo.jpg";
+    $(".photo").attr("src",photoName); 
+
+    var href1 = "cases.html?id=" + caseStartIndex.toString();
+    var href2 = "cases.html?id=" + (caseStartIndex+1).toString();
+    var href3 = "cases.html?id=" + (caseStartIndex+2).toString();
+    var href4 = "cases.html?id=" + (caseStartIndex+3).toString();
+
+    var imgsrc1 = casesInfo[caseStartIndex].pathname + casesInfo[caseStartIndex].pics[0].pic;
+    var imgsrc2 = casesInfo[caseStartIndex+1].pathname + casesInfo[caseStartIndex+1].pics[0].pic;
+    var imgsrc3 = casesInfo[caseStartIndex+2].pathname + casesInfo[caseStartIndex+2].pics[0].pic;
+    var imgsrc4 = casesInfo[caseStartIndex+3].pathname + casesInfo[caseStartIndex+3].pics[0].pic;
+
+    var text1 =  casesInfo[caseStartIndex].caseDesp;
+    var text2 =  casesInfo[caseStartIndex+1].caseDesp;
+    var text3 =  casesInfo[caseStartIndex+2].caseDesp;
+    var text4 =  casesInfo[caseStartIndex+3].caseDesp;
+
+    //alert(href1 + imgsrc1 + text1);
+   // alert(imgsrc2);
+    $("#shortcase2").attr("href",href2);
+    $("#shortcase2 img").attr("src",imgsrc2);    
+    $("#shortcase2 .filter_shortcase p").text(text2);
+
+    //alert(href1 + imgsrc1 + text1);
+    $("#shortcase1").attr("href",href1);
+    $("#shortcase1 img").attr("src",imgsrc1);    
+    $("#shortcase1 .filter_shortcase p").text(text1);
+
+     $("#shortcase3").attr("href",href3);
+    $("#shortcase3 img").attr("src",imgsrc3);    
+    $("#shortcase3 .filter_shortcase p").text(text3);
+
+     $("#shortcase4").attr("href",href4);
+    $("#shortcase4 img").attr("src",imgsrc4);    
+    $("#shortcase4 .filter_shortcase p").text(text4);
 }
 
 $(document).ready(function(){
@@ -198,29 +235,22 @@ $(document).ready(function(){
 
 		if(id!=null)
 		{
-		   id_id = Number(id);		   
-		   if((id_id >= (designerInfoArray[0].numCases+designerInfoArray[1].numCases))&&(id_id<total_num))
-		   {
-                        designerID = 2;
-			numCasesDesigner = designerInfoArray[2].numCases;
-		        caseStartIndex = designerInfoArray[0].numCases+designerInfoArray[1].numCases;	
-			caseEndIndex = total_num-1;
-		   }
-		   else if(id_id >= designerInfoArray[0].numCases)
-		   {
-			  designerID = 1;
-                          numCasesDesigner = designerInfoArray[1].numCases; 
-                          caseStartIndex = designerInfoArray[0].numCases;
-                          caseEndIndex = designerInfoArray[0].numCases+designerInfoArray[1].numCases - 1;
-		   }
-		   else
-		   {
-                          designerID = 0;
-                          numCasesDesigner = designerInfoArray[0].numCases;  
-                          caseStartIndex = 0;
-                          caseEndIndex = designerInfoArray[0].numCases - 1;
-		   }
-		   		
+		   id_id = Number(id);
+
+                   var i=0;
+		   var sum_cases = 0;
+                   for(i=0;i<designerInfoArray.length;i++)
+	           {
+                        sum_cases = sum_cases + designerInfoArray[i].numCases;
+			if(id_id<sum_cases)
+			{
+                            designerID = i;
+                            numCasesDesigner = designerInfoArray[i].numCases;
+                            caseStartIndex = sum_cases - designerInfoArray[i].numCases;
+                            caseEndIndex = sum_cases-1;
+			    break;
+			}
+		   }		   		   		
 		}
 		else
 		{
@@ -325,10 +355,14 @@ $(document).ready(function(){
 
                 $(".designer_block a").mouseout(
 		       function(event){
-		     //  alert($(event.target).attr("class"));
+		       //alert(event.target);
 		       if($(event.target).attr("class").search("filter")!=-1)
 		       {
                           $(event.target).css("visibility","hidden");
+		       }
+		       else if($(event.target).attr("class").search("ptext")!=-1)
+		       {
+                           $(event.target).parents(".filter_shortcase").css("visibility","hidden");
 		       }
 
 		       }
