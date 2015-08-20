@@ -1,3 +1,29 @@
+var currentPageIndex = 0;
+var pagesID = new Array("previouspage","page1","page2","page3","page4","nextpage");
+var numberPages = 6;
+
+function getPageIndex(pageId)
+{
+    var i = 0;
+    var retVal = -1;
+    for(i=0;i<numberPages;i++)
+    {
+	if(pageId==pagesID[i])
+	{
+	    break;
+	}
+    }
+
+    if(i==numberPages)
+    {
+	retVal = -1;
+    }
+    else
+    {
+	retVal = i;
+    }
+    return retVal;
+}
 
 $(document).ready(function(){
 	
@@ -70,6 +96,10 @@ $(document).ready(function(){
         }
 
         $(".filter_img").css("display","none");
+	currentPageIndex = 1;
+	PageID = "#" + pagesID[0];
+	$(PageID).css("visiblility","hidden");
+
 
 	$("#left_button").click(
 		function(event)
@@ -149,6 +179,71 @@ $(document).ready(function(){
 				 //	$(event.target).css("visibility","visible");
 			       }
 			       );
-      
+     
+		$("#pages a").click(
+			function(event)
+			{
+			   // alert($(event.target).attr("id"));
+			    var id_clicked = $(event.target).attr("id");
+                            var pageIndexClicked = getPageIndex(id_clicked);
+                            //alert(pageIndexClicked);
+			    if(pageIndexClicked==0)
+			    {
+			        if(currentPageIndex != 1)
+				{
+				   var PageID = "#" + pagesID[currentPageIndex];
+				   $(PageID).css("color","blue");
+			           currentPageIndex = currentPageIndex - 1;
+                                   PageID = "#" + pagesID[currentPageIndex];
+				   $(PageID).css("color","#c71585");
+
+				   
+				}
+			    }
+			    else if(id_clicked=="nextpage")
+			    {
+			       if(currentPageIndex != (numberPages-2))
+				{
+				   var PageID = "#" + pagesID[currentPageIndex];
+				   $(PageID).css("color","blue");
+			           currentPageIndex = currentPageIndex + 1;
+                                   PageID = "#" + pagesID[currentPageIndex];
+				   $(PageID).css("color","#c71585");
+				   
+				}
+			    }
+			    else
+			    {
+				var PageID = "#" + pagesID[currentPageIndex];
+				$(PageID).css("color","blue");
+			        $(event.target).css("color","#c71585");
+                                currentPageIndex = pageIndexClicked;
+			    }
+			   
+			     if(currentPageIndex==1)
+		             {
+				     var PageID = "#" + pagesID[0];
+				      $(PageID).css("visibility","hidden");
+                                      PageID = "#" + pagesID[numberPages-1];
+				      $(PageID).css("visibility","visible");
+		             }
+			     else if(currentPageIndex==(numberPages-2))
+			     {
+				     var PageID = "#" + pagesID[0];
+				      $(PageID).css("visibility","visible");
+                                      PageID = "#" + pagesID[numberPages-1];
+				      $(PageID).css("visibility","hidden"); 
+			     }
+			     else
+			     {
+                                     var PageID = "#" + pagesID[0];
+				      $(PageID).css("visibility","visible");
+                                      PageID = "#" + pagesID[numberPages-1];
+				      $(PageID).css("visibility","visible"); 
+ 
+			     }
+
+			}
+			);
 
 });
