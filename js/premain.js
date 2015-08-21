@@ -35,6 +35,7 @@ function timedPrint()
 	{
 	     clearTimeout(t);
 	     $("#logo").css("display","");
+	      //$("#div_body").css("width",(widthDoc-1000)/2);
                
 	}
 	else
@@ -55,7 +56,13 @@ $(document).ready(function(){
 
    $("body").height( $(document).innerHeight());
 
-   var Width_toMove = (widthDoc - widthpa1)/2;
+   
+
+  // alert((widthDoc-1000)/2);
+   $("#left_gap").css("width",(widthDoc-1000)/2);
+   
+   var Width_toMove = (widthDoc - widthpa1)/2 - (widthDoc-1000)/2;
+
    $("#logo").css("display","none");
 
    $("#pa1").animate(
@@ -72,7 +79,7 @@ $(document).ready(function(){
    for(i=0;i<6;i++)
    {
      widthpb = $(textLineArray[i]).width();
-     Width_toMove = (widthDoc - widthpb)/2;
+     Width_toMove = (widthDoc - widthpb)/2 - (widthDoc-1000)/2;
      $(textLineArray[i]).css("left",Width_toMove);
     // $(textLineArray[i]).css("width","0px");
      strArray[i] =  $(textLineArray[i]).text();
@@ -82,7 +89,7 @@ $(document).ready(function(){
        
    }
     var widthlogo = $(textLineArray[i]).width();
-     Width_toMove = (widthDoc - widthlogo)/2;
+     Width_toMove = (widthDoc - widthlogo)/2 - (widthDoc-1000)/2;
     $(textLineArray[i]).css("left",Width_toMove);
 
 

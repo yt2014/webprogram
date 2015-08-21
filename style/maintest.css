@@ -211,11 +211,37 @@ a{
 
 #img_team
 {
-	margin-top:30px;
-   height:430px;
-   background:url("../pictures/teamPhoto.jpg");
+   margin-top:30px;
+   width:810px;
+   height:360px;
+   overflow:hidden;
+   //background:url("../pictures/teamPhoto.jpg");
 }
 
+#long_div
+{
+	width:3240px;
+	height:360px;
+}
+
+#div_pics1
+{
+   float:left;
+}
+
+#div_pics2
+{ 
+   float:left;
+}
+
+.desiner
+{
+	width:270px;
+	height:360px;
+	overflow:hidden;
+	float:left;
+	
+}
 #view_more_team
 {
 	padding-top:30px;

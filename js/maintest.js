@@ -7,6 +7,7 @@ var arColors = new Array("red","blue","blue","yellow","gray","white");
 var arbg = new Array("url(\"pictures/garden.jpg\")","url(\"pictures/garden1.jpg\")","url(\"pictures/keting10.jpg\")","url(\"pictures/cateen.jpg\")");
 var arimgs = new Array("#img1","#img2","#img3","#img4");
 
+var hoverd = 0;
 
 function firstFlash(){
 
@@ -51,6 +52,19 @@ function firstFlash(){
     setTimeout("firstFlash()",6000); //设置过1000毫秒就是1秒，调用show方法
 }
 
+function Marquee(){
+	if($("#img_team").scrollLeft() >= 1620)
+		$("#img_team").scrollLeft(0);
+	else{
+		if(hoverd==0)
+		{
+		   $("#img_team").scrollLeft($("#img_team").scrollLeft()+1);
+		}
+	}
+
+        setTimeout("Marquee()",10); //设置过1000毫秒就是1秒，调用show方法
+}
+
 
 $(document).ready(function(){
 	
@@ -63,8 +77,11 @@ $(document).ready(function(){
         /*in aboutus page, link clicked events in the left*/
 	countFlash=0;
 	flagFlash=1;
+        $("#div_pics2").html($("#div_pics1").html());
+
         $("body").load(firstFlash());
 
+	 Marquee();
 	$("#flash_area").mouseover(function(){
 	
 	     flagFlash = 0;
@@ -74,6 +91,22 @@ $(document).ready(function(){
 	
 	     flagFlash = 1;
 	});
+
+       $(".desiner").mouseover(
+		       function(event){
+			      // alert($(event.target).attr("class"));
+                               hoverd = 1;
+		       }
+		       );
+
+       $(".desiner").mouseout(
+		       function(event){
+			      // alert($(event.target).attr("class"));
+                               hoverd = 0;
+		       }
+		       );
+       
+
 
 
 	// $(".svg_show").mouseover(
