@@ -1,18 +1,33 @@
+var currentPageIndex = 0;
+var pagesID = new Array("previouspage","page1","page2","page3","page4","nextpage");
+var numberPages = 6;
 
-$(document).ready(function(){
-	
-//	alert("ready height is "+$(document).innerHeight());
+function getPageIndex(pageId)
+{
+    var i = 0;
+    var retVal = -1;
+    for(i=0;i<numberPages;i++)
+    {
+	if(pageId==pagesID[i])
+	{
+	    break;
+	}
+    }
 
-	$("body").width($(document).innerWidth());
-//        $("#div_body").height(400);
-//	$("#div_body").height(900);
-//	$("#div_buttom").height($(document).innerHeight()*0.1);
-//
-        initCasesInfo();
+    if(i==numberPages)
+    {
+	retVal = -1;
+    }
+    else
+    {
+	retVal = i;
+    }
+    return retVal;
+}
 
-      //  alert(casesInfo[0].pathname);
-
-	var numCases = casesInfo.length;
+function initBlocks(pageID)
+{
+   	var numCases = casesInfo.length;
         var i=0;
 	//alert("case number: " + numCases);
 	$("#caseBlocks").empty();
@@ -68,8 +83,33 @@ $(document).ready(function(){
            $("#caseBlocks").append(divBlock);
 
         }
+ 
+}
+
+$(document).ready(function(){
+	
+//	alert("ready height is "+$(document).innerHeight());
+
+	$("body").width($(document).innerWidth());
+//        $("#div_body").height(400);
+//	$("#div_body").height(900);
+//	$("#div_buttom").height($(document).innerHeight()*0.1);
+//
+        initCasesInfo();
+
+	initBlocks(0);
+      //  alert(casesInfo[0].pathname);
 
         $(".filter_img").css("display","none");
+	currentPageIndex = 1;
+        $("#prepage").css("visibility","hidden");
+
+
+	PageID = "#" + pagesID[1];
+	$(PageID).css("color","#c71585");
+
+
+
 
 	$("#left_button").click(
 		function(event)
@@ -149,6 +189,66 @@ $(document).ready(function(){
 				 //	$(event.target).css("visibility","visible");
 			       }
 			       );
-      
+     
+		$("#pages a").click(
+			function(event)
+			{
+			   // alert($(event.target).attr("id"));
+			    var id_clicked = $(event.target).attr("id");
+                            var pageIndexClicked = getPageIndex(id_clicked);
+                            //alert(pageIndexClicked);
+			    
+			    if(pageIndexClicked==0)
+			    {
+			        if(currentPageIndex != 1)
+				{
+				   var PageID = "#" + pagesID[currentPageIndex];
+				   $(PageID).css("color","blue");
+			           currentPageIndex = currentPageIndex - 1;
+                                   PageID = "#" + pagesID[currentPageIndex];
+				   $(PageID).css("color","#c71585");
+
+				   
+				}
+			    }
+			    else if(pageIndexClicked==numberPages-1)
+			    {
+			       if(currentPageIndex != (numberPages-2))
+				{
+				   var PageID = "#" + pagesID[currentPageIndex];
+				   $(PageID).css("color","blue");
+			           currentPageIndex = currentPageIndex + 1;
+                                   PageID = "#" + pagesID[currentPageIndex];
+				   $(PageID).css("color","#c71585");
+				   
+				}
+			    }
+			    else
+			    {
+				var PageID = "#" + pagesID[currentPageIndex];
+				$(PageID).css("color","blue");
+			        $(event.target).css("color","#c71585");
+                                currentPageIndex = pageIndexClicked;
+			    }
+			   
+			     if(currentPageIndex==1)
+		             {
+				      $("#prepage").css("visibility","hidden");
+				      $("#nexpage").css("visibility","visible");
+		             }
+			     else if(currentPageIndex==(numberPages-2))
+			     {
+				    $("#prepage").css("visibility","visible");
+				    $("#nexpage").css("visibility","hidden");
+ 
+			     }
+			     else
+			     {
+                                    $("#prepage").css("visibility","visible");
+				    $("#nexpage").css("visibility","visible"); 
+			     }
+
+			}
+			);
 
 });
