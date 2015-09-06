@@ -58,8 +58,19 @@ $(document).ready(function(){
 
    
 
-  // alert((widthDoc-1000)/2);
-   $("#left_gap").css("width",(widthDoc-1000)/2);
+//   alert(widthDoc);
+   if(widthDoc > 1000)
+   {
+     $("#left_gap").css("width",(widthDoc-1000)/2);
+     $("#div_body").width(1000);
+   }
+   else
+   {
+       
+     $("#left_gap").css("width",0);
+     $("#left_gap").css("display","none");
+     $("#div_body").width(widthDoc);
+   }
    
    var Width_toMove = (widthDoc - widthpa1)/2 - (widthDoc-1000)/2;
 
