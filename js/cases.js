@@ -153,10 +153,10 @@ function setDesigner(designer_ID)
     var photoName = designerInfoArray[designer_ID].pathfolder + "photo.jpg";
     $(".photo").attr("src",photoName); 
 
-    var href1 = "cases.html?id=" + caseStartIndex.toString();
-    var href2 = "cases.html?id=" + (caseStartIndex+1).toString();
-    var href3 = "cases.html?id=" + (caseStartIndex+2).toString();
-    var href4 = "cases.html?id=" + (caseStartIndex+3).toString();
+    var href1 = "Cases.html?id=" + caseStartIndex.toString();
+    var href2 = "Cases.html?id=" + (caseStartIndex+1).toString();
+    var href3 = "Cases.html?id=" + (caseStartIndex+2).toString();
+    var href4 = "Cases.html?id=" + (caseStartIndex+3).toString();
 
     var imgsrc1 = casesInfo[caseStartIndex].pathname + casesInfo[caseStartIndex].pics[0].pic;
     var imgsrc2 = casesInfo[caseStartIndex+1].pathname + casesInfo[caseStartIndex+1].pics[0].pic;
