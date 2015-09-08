@@ -56,8 +56,22 @@
     </div>
     <!-- <div id="topArea" style="width:100%;height:100px;background-color:blue;"></div>--->
     <div id="body_area">
-	<div>
-            <div style="width:697px;height:550px;border:#ccc solid 1px;margin-top:20px;margin-left:20px;" id="dituContent"></div>
+	<div id="addr_map" style="width:800px;height:550px;border:#ccc solid 1px;float:left">
+	    <div style="float:left;width:100px;height:550px;padding-top:30px;">
+		<p style="font-weight:bold">公司地址:</p>
+		<p>成都市青羊区光华北三路98号光华中心B-1503</p>
+		<br/>
+		<p style="font-weight:bold">联系电话：</p>
+		<p>028-86123480</p>
+	    </div>
+            <div style="float:left;width:697px;height:550px;" id="dituContent"></div>
+	</div>
+	<div id="qq_contact" style="float:left;width:150px;height:550px;color:blue;padding-left:5px;padding-top:20px;">
+	    <p>qq在线咨询</p>
+	    <a href="http://wpa.qq.com/msgrd?v=3&uin=379173342&site=qq&menu=yes" target=_blank><p>范东-- 设计总监</p></a>
+	    <a href="http://wpa.qq.com/msgrd?v=3&uin=379173342&site=qq&menu=yes" target=_blank><p>肖春-- 首席设计师</p></a>
+	    <a href="http://wpa.qq.com/msgrd?v=3&uin=10933977&site=qq&menu=yes" target=_blank><p>唐希-- 创意总监</p></a>
+
 	</div>
     </div>
       <div id = "div_buttom">
@@ -207,10 +221,19 @@ initMap();//创建和初始化地图
 
 $(document).ready(function(){
 //	alert("ready doc");
-	$("#body_area").width($(document).innerWidth());
+	$("#body_area").width($(document).innerWidth()-2);
 //	alert($(document).innerHeight());
-        $("#body_area").height($(document).innerHeight()-220);
+	$("#body_area").height($(document).innerHeight()-200);
+	if($("#body_area").width()>=950)
+	{
+           $("#addr_map").css("margin-left",($("#body_area").width()-950)/2);
+	}
 
+	if($("#body_area").height()>=550)
+	{
+           $("#addr_map").css("margin-top",($("#body_area").height()-550)/2); 
+           $("#qq_contact").css("margin-top",($("#body_area").height()-550)/2);
+	}
 
 	});
 
