@@ -27,7 +27,16 @@ function getPageIndex(pageId)
 
 function mouseOverBlock()
 {
-    alert($(this).attr("class"));
+   // alert($(this).attr("class"));
+    $(this).find(".filter_img").css("display","");
+
+}
+
+function mouseOutBlock()
+{
+   // alert($(this).attr("class"));
+    $(this).find(".filter_img").css("display","none");
+
 }
 
 function initBlocks(pageID)
@@ -61,6 +70,8 @@ function initBlocks(pageID)
 	   divPic.addClass("pictureInBlock");
 
            divPic.bind("mouseover",mouseOverBlock);
+	   divPic.bind("mouseout",mouseOutBlock);
+ 
 
 	   var linkPic = $("<a></a>");
 	   linkPic.attr({"class":"pic_link"});
@@ -77,6 +88,7 @@ function initBlocks(pageID)
 	   var divFilter = $("<div></div>");
 	   divFilter.attr({"class":"filter_img"});
            divFilter.addClass("filter_img");
+           divFilter.css("display","none");
            
 	   
 
@@ -215,7 +227,7 @@ $(document).ready(function(){
 	       }
 	       );
 
-	       $(".pictureInBlock").mouseover(
+	  /*     $(".pictureInBlock").mouseover(
 			       function(event){
 			        // alert($(event.target).attr("class"));
 
@@ -249,7 +261,7 @@ $(document).ready(function(){
 	                }
 				 //	$(event.target).css("visibility","visible");
 			       }
-			       );
+			       );*/
      
 		$("#pages a").click(
 			function(event)
