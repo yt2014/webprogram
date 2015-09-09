@@ -25,7 +25,10 @@ function getPageIndex(pageId)
     return retVal;
 }
 
-
+function mouseOverBlock()
+{
+    alert($(this).attr("class"));
+}
 
 function initBlocks(pageID)
 {
@@ -56,6 +59,8 @@ function initBlocks(pageID)
 	   var divPic = $("<div></div>");
 	   divPic.attr({"class":"pictureInBlock"});
 	   divPic.addClass("pictureInBlock");
+
+           divPic.bind("mouseover",mouseOverBlock);
 
 	   var linkPic = $("<a></a>");
 	   linkPic.attr({"class":"pic_link"});
@@ -212,7 +217,7 @@ $(document).ready(function(){
 
 	       $(".pictureInBlock").mouseover(
 			       function(event){
-			      //   alert($(event.target).attr("class"));
+			        // alert($(event.target).attr("class"));
 
 				 var classEvent = $(event.target).attr("class");
 			if(classEvent=="imgAdd")
@@ -312,5 +317,18 @@ $(document).ready(function(){
 
 			}
 			);
+
+			$("#caseBlocks").mouseover(
+				function(event){
+			//	alert(event.target);
+				}
+				);
+
+			$(".pictureInBlock").live("mouseover",
+				function()
+				{
+				    alert($(this));
+				}
+				);
 
 });
