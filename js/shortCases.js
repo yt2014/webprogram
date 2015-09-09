@@ -6,7 +6,7 @@ function getPageIndex(pageId)
 {
     var i = 0;
     var retVal = -1;
-    for(i=0;i<numberPages;i++)
+    for(i=0;i<pagesID.length;i++)
     {
 	if(pageId==pagesID[i])
 	{
@@ -14,7 +14,7 @@ function getPageIndex(pageId)
 	}
     }
 
-    if(i==numberPages)
+    if(i==pagesID.length)
     {
 	retVal = -1;
     }
@@ -25,13 +25,29 @@ function getPageIndex(pageId)
     return retVal;
 }
 
+
+
 function initBlocks(pageID)
 {
+
+        //	alert(casesInfo.length);
+//	alert(numberPages);
+//
+        var i_start = pageID*16;
    	var numCases = casesInfo.length;
+	var i_end;
+	if(numCases > pageID*(16+1))
+	{
+            i_end = pageID*16 + 16; 
+	}
+	else
+	{
+	    i_end = numCases;
+	}
         var i=0;
 	//alert("case number: " + numCases);
 	$("#caseBlocks").empty();
-	for(i=0;i<numCases;i++)
+	for(i=i_start;i<i_end;i++)
         {
            var divBlock = $("<div></div>");
 	   divBlock.attr({"class":"case_block"});
@@ -86,18 +102,58 @@ function initBlocks(pageID)
  
 }
 
+function addPagesIndications(numPages)
+{
+     pagesID.length = 0;
+     pagesID = new Array();
+
+     pagesID[0] = "previouspage"; 
+
+     var i=0; 
+     for(i=0;i<numPages;i++)
+     {
+        var linkPageIn = $("<a></a>");
+        var strId = "page" + (i+1).toString();
+
+        linkPageIn.attr({"href":"#","id":strId});
+        linkPageIn.css({"margin":"5px","color":"blue"});
+        linkPageIn.text((i+1).toString());	
+
+        $("#nexpage").before(linkPageIn);
+        pagesID[i+1] = strId;
+     }
+
+     pagesID[i+1] = "nextpage"; 
+     var strSpan = "¹²" + casesInfo.length + "Ìõ";
+     $("#totalCases").text(strSpan);
+    
+}
+
+
 $(document).ready(function(){
 	
 //	alert("ready height is "+$(document).innerHeight());
 
 	$("body").width($(document).innerWidth());
+        $("#left_column").width(($(document).innerWidth()-920)/2);
+        $("#body_right").width(($(document).innerWidth()-920)/2);
+
 //        $("#div_body").height(400);
 //	$("#div_body").height(900);
 //	$("#div_buttom").height($(document).innerHeight()*0.1);
 //
+        
         initCasesInfo();
+        numberPages = parseInt((casesInfo.length + 15) / 16);
 
 	initBlocks(0);
+
+	//delete the pages indication here.
+        $("#page1").remove();
+        $("#page2").remove();
+	$("#page3").remove();
+	$("#page4").remove();
+        addPagesIndications(numberPages);
       //  alert(casesInfo[0].pathname);
 
         $(".filter_img").css("display","none");
@@ -194,9 +250,12 @@ $(document).ready(function(){
 			function(event)
 			{
 			   // alert($(event.target).attr("id"));
+                            event.preventDefault();
+		            event.stopPropagation();
+
 			    var id_clicked = $(event.target).attr("id");
                             var pageIndexClicked = getPageIndex(id_clicked);
-                            //alert(pageIndexClicked);
+                          //  alert(pageIndexClicked);
 			    
 			    if(pageIndexClicked==0)
 			    {
@@ -211,9 +270,9 @@ $(document).ready(function(){
 				   
 				}
 			    }
-			    else if(pageIndexClicked==numberPages-1)
+			    else if(pageIndexClicked == (pagesID.length-1))
 			    {
-			       if(currentPageIndex != (numberPages-2))
+			       if(currentPageIndex != (pagesID.length-2))
 				{
 				   var PageID = "#" + pagesID[currentPageIndex];
 				   $(PageID).css("color","blue");
@@ -230,13 +289,14 @@ $(document).ready(function(){
 			        $(event.target).css("color","#c71585");
                                 currentPageIndex = pageIndexClicked;
 			    }
-			   
+			  
+
 			     if(currentPageIndex==1)
 		             {
 				      $("#prepage").css("visibility","hidden");
 				      $("#nexpage").css("visibility","visible");
 		             }
-			     else if(currentPageIndex==(numberPages-2))
+			     else if(currentPageIndex==(pagesID.length-2))
 			     {
 				    $("#prepage").css("visibility","visible");
 				    $("#nexpage").css("visibility","hidden");
@@ -247,6 +307,8 @@ $(document).ready(function(){
                                     $("#prepage").css("visibility","visible");
 				    $("#nexpage").css("visibility","visible"); 
 			     }
+                             
+                             initBlocks(currentPageIndex-1);
 
 			}
 			);
