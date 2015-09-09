@@ -223,7 +223,14 @@ $(document).ready(function(){
 //	alert("ready doc");
 	$("#body_area").width($(document).innerWidth()-2);
 //	alert($(document).innerHeight());
-	$("#body_area").height($(document).innerHeight()-200);
+	if($(document).innerHeight()>790)
+	{
+	   $("#body_area").height($(document).innerHeight()-200);
+	}
+	else
+	{
+	    $("#body_area").height(590);
+	}
 	if($("#body_area").width()>=950)
 	{
            $("#addr_map").css("margin-left",($("#body_area").width()-950)/2);
@@ -233,6 +240,10 @@ $(document).ready(function(){
 	{
            $("#addr_map").css("margin-top",($("#body_area").height()-550)/2); 
            $("#qq_contact").css("margin-top",($("#body_area").height()-550)/2);
+	}
+	else
+	{
+	   
 	}
 
 	});
