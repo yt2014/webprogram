@@ -9,11 +9,11 @@
 #div_body
 {
 	width:100%;
-	height:900px;
+	height:1000px;
 	//background-color:red;
 	text-align:center;
         padding-top:90px;
-	overflow:auto;
+//	overflow:auto;
 }
 
 
@@ -156,7 +156,7 @@ a{
 #left_column
 {
 	height:100%;
-	width:15%;
+//	width:15%;
 //	background-color:blue;
 	text-align:center;
 	float:left;
@@ -165,7 +165,7 @@ a{
 #body_middle
 {
     float:left;
-    width:70%;
+    width:920px;
     height:100%;
     background-color:#dcdcdc;
 }
@@ -173,7 +173,7 @@ a{
 #body_right
 {
     height:100%;
-    width:15%;
+//    width:15%;
   //  background-color:blue;
     float:left;
 }
