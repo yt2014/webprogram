@@ -65,6 +65,16 @@ function Marquee(){
         setTimeout("Marquee()",10); //设置过1000毫秒就是1秒，调用show方法
 }
 
+function linkMouseOver()
+{
+	//alert($(this).attr("class"));
+	$(this).find(".div_filter").css("display","");
+}
+
+function linkMouseOut()
+{
+	$(this).find(".div_filter").css("display","none");
+}
 
 $(document).ready(function(){
 	
@@ -133,7 +143,9 @@ $(document).ready(function(){
 	     $(event.target).siblings("text").css("visibility","hidden");
 	});
 
-       
+        $(".div_filter").css("display","none");
+	$(".link_show").bind("mouseover",linkMouseOver);  
+        $(".link_show").bind("mouseout",linkMouseOut);
 });
 
 

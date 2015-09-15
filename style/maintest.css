@@ -252,7 +252,7 @@ a{
 #caseshow_area
 {
     height:400px;
-    width:100%;
+    //width:100%;
    // background-color:green;
     width:74%;
   // height:400px;
@@ -263,6 +263,7 @@ a{
    padding-top:10px;
    color:#696969;
    text-align:center;
+   overflow:scroll;
 }
 #caseshow_title
 {
@@ -321,6 +322,10 @@ a{
 .link_show
 {
    float:left;
+   width:200px;
+   height:180px;
+   overflow:hidden;
+   margin-right:1px;
 }
 
 #svg_case_more
