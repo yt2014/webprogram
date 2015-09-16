@@ -272,7 +272,246 @@ function initCasesInfo()
             	    
     }
     casesInfo[18] = new caseInfo(2,picsArray18,"fandong/xiaochunZuopin/chalou/","茶楼");
+	
+	var picsArray19 = new Array();
+    for(i=0;i<3;i++)
+    {
+	    
+       var picname = (i+1).toString() + ".jpg";
+       var disc = "实景图" + (i+1).toString(); 
+       picinfo_one = new picInfo(picname,disc);
+       picsArray19[i] = picinfo_one;
+            	    
+    }
+    casesInfo[19] = new caseInfo(3,picsArray19,"fandong/xiaochunZuopin/yufeng/","誉峰");
+	
+	var picsArray20 = new Array();
+    for(i=0;i<12;i++)
+    {
+	    
+       var picname = (i+1).toString() + ".jpg";
+       var disc = "实景图" + (i+1).toString(); 
+       picinfo_one = new picInfo(picname,disc);
+       picsArray20[i] = picinfo_one;
+            	    
+    }
+    casesInfo[20] = new caseInfo(12,picsArray20,"fandong/xiaochunZuopin/ruanjianyuan/","软件园外籍人别墅");
+	
+	var picsArray21 = new Array();
+    for(i=0;i<4;i++)
+    {
+	    
+       var picname = (i+1).toString() + ".jpg";
+       var disc = "实景图" + (i+1).toString(); 
+       picinfo_one = new picInfo(picname,disc);
+       picsArray21[i] = picinfo_one;
+            	    
+    }
+    casesInfo[21] = new caseInfo(4,picsArray21,"fandong/xiaochunZuopin/suining/","遂宁商业银行");
+	
+	var picsArray22 = new Array();
+    for(i=0;i<2;i++)
+    {
+	    
+       var picname = (i+1).toString() + ".jpg";
+       var disc = "实景图" + (i+1).toString(); 
+       picinfo_one = new picInfo(picname,disc);
+       picsArray22[i] = picinfo_one;
+            	    
+    }
+    casesInfo[22] = new caseInfo(2,picsArray22,"fandong/xiaochunZuopin/wangzhai/","王宅");
+	
+	var picsArray23 = new Array();
+    for(i=0;i<4;i++)
+    {
+	    
+       var picname = (i+1).toString() + ".jpg";
+       var disc = "实景图" + (i+1).toString(); 
+       picinfo_one = new picInfo(picname,disc);
+       picsArray23[i] = picinfo_one;
+            	    
+    }
+    casesInfo[23] = new caseInfo(4,picsArray23,"fandong/xiaochunZuopin/modernZhongshiHuisuo/","现代中式私人会所");
+	
+	var picsArray24 = new Array();
+    for(i=0;i<4;i++)
+    {
+	    
+       var picname = (i+1).toString() + ".jpg";
+       var disc = "实景图" + (i+1).toString(); 
+       picinfo_one = new picInfo(picname,disc);
+       picsArray24[i] = picinfo_one;
+            	    
+    }
+    casesInfo[24] = new caseInfo(4,picsArray24,"fandong/xiaochunZuopin/DianliZhanting/","电力展厅");
+	
+	var picsArray25 = new Array();
+    for(i=0;i<12;i++)
+    {
+	    
+       var picname = (i+1).toString() + ".jpg";
+       var disc = "实景图" + (i+1).toString(); 
+       picinfo_one = new picInfo(picname,disc);
+       picsArray25[i] = picinfo_one;
+            	    
+    }
+    casesInfo[25] = new caseInfo(12,picsArray25,"fandong/xiaochunZuopin/gesanghua/","格桑花精装公寓");
+	
+	var picsArray26 = new Array();
+    for(i=0;i<3;i++)
+    {
+	    
+       var picname = (i+1).toString() + ".jpg";
+       var disc = "实景图" + (i+1).toString(); 
+       picinfo_one = new picInfo(picname,disc);
+       picsArray26[i] = picinfo_one;
+            	    
+    }
+    casesInfo[26] = new caseInfo(3,picsArray26,"fandong/xiaochunZuopin/wuHai/","武海");
+	
+	var picsArray27 = new Array();
+    for(i=0;i<2;i++)
+    {
+	    
+       var picname = (i+1).toString() + ".jpg";
+       var disc = "实景图" + (i+1).toString(); 
+       picinfo_one = new picInfo(picname,disc);
+       picsArray27[i] = picinfo_one;
+            	    
+    }
+    casesInfo[27] = new caseInfo(2,picsArray27,"fandong/xiaochunZuopin/yangZhai/","杨宅");
+	
+	var picsArray28 = new Array();
+    for(i=0;i<3;i++)
+    {
+	    
+       var picname = (i+1).toString() + ".jpg";
+       var disc = "实景图" + (i+1).toString(); 
+       picinfo_one = new picInfo(picname,disc);
+       picsArray28[i] = picinfo_one;
+            	    
+    }
+    casesInfo[28] = new caseInfo(3,picsArray28,"fandong/xiaochunZuopin/yilongGuoyi/","意龙国际售楼部");
+	
+	var picsArray29 = new Array();
+    for(i=0;i<5;i++)
+    {
+	    
+       var picname = (i+1).toString() + ".jpg";
+       var disc = "实景图" + (i+1).toString(); 
+       picinfo_one = new picInfo(picname,disc);
+       picsArray29[i] = picinfo_one;
+            	    
+    }
+    casesInfo[29] = new caseInfo(5,picsArray29,"fandong/xiaochunZuopin/PengZhouLiDao/","彭州丽岛公区");
+	
+	var picsArray30 = new Array();
+    for(i=0;i<6;i++)
+    {
+	    
+       var picname = (i+1).toString() + ".jpg";
+       var disc = "实景图" + (i+1).toString(); 
+       picinfo_one = new picInfo(picname,disc);
+       picsArray30[i] = picinfo_one;
+            	    
+    }
+    casesInfo[30] = new caseInfo(6,picsArray30,"fandong/xiaochunZuopin/PengShanLiZhai/","彭山李宅");
+	
+	var picsArray31 = new Array();
+    for(i=0;i<8;i++)
+    {
+	    
+       var picname = (i+1).toString() + ".jpg";
+       var disc = "实景图" + (i+1).toString(); 
+       picinfo_one = new picInfo(picname,disc);
+       picsArray31[i] = picinfo_one;
+            	    
+    }
+    casesInfo[31] = new caseInfo(8,picsArray31,"fandong/xiaochunZuopin/GuoMaoDaJiuDian/","国贸大酒店");
+	
+	var picsArray32 = new Array();
+    for(i=0;i<3;i++)
+    {
+	    
+       var picname = (i+1).toString() + ".jpg";
+       var disc = "实景图" + (i+1).toString(); 
+       picinfo_one = new picInfo(picname,disc);
+       picsArray32[i] = picinfo_one;
+            	    
+    }
+    casesInfo[32] = new caseInfo(3,picsArray32,"fandong/xiaochunZuopin/TangZhai/","唐宅");
+	
+	var picsArray33 = new Array();
+    for(i=0;i<2;i++)
+    {
+	    
+       var picname = (i+1).toString() + ".jpg";
+       var disc = "实景图" + (i+1).toString(); 
+       picinfo_one = new picInfo(picname,disc);
+       picsArray33[i] = picinfo_one;
+            	    
+    }
+    casesInfo[33] = new caseInfo(2,picsArray33,"fandong/xiaochunZuopin/HuaqiaoChengLiZhai/","华侨城李宅");
 
+	var picsArray34 = new Array();
+    for(i=0;i<3;i++)
+    {
+	    
+       var picname = (i+1).toString() + ".jpg";
+       var disc = "实景图" + (i+1).toString(); 
+       picinfo_one = new picInfo(picname,disc);
+       picsArray34[i] = picinfo_one;
+            	    
+    }
+    casesInfo[34] = new caseInfo(3,picsArray34,"fandong/xiaochunZuopin/HuaqiaochengZhigong/","华侨城职工宿舍");
+	
+	var picsArray35 = new Array();
+    for(i=0;i<3;i++)
+    {
+	    
+       var picname = (i+1).toString() + ".jpg";
+       var disc = "实景图" + (i+1).toString(); 
+       picinfo_one = new picInfo(picname,disc);
+       picsArray35[i] = picinfo_one;
+            	    
+    }
+    casesInfo[35] = new caseInfo(3,picsArray35,"fandong/xiaochunZuopin/HuayuYinyue/","华宇音乐花园 陈宅");
+	
+	var picsArray36 = new Array();
+    for(i=0;i<12;i++)
+    {
+	    
+       var picname = (i+1).toString() + ".jpg";
+       var disc = "实景图" + (i+1).toString(); 
+       picinfo_one = new picInfo(picname,disc);
+       picsArray36[i] = picinfo_one;
+            	    
+    }
+    casesInfo[36] = new caseInfo(12,picsArray36,"fandong/xiaochunZuopin/YirongTouzi/","亿荣投资");
+	
+	var picsArray37 = new Array();
+    for(i=0;i<4;i++)
+    {
+	    
+       var picname = (i+1).toString() + ".jpg";
+       var disc = "实景图" + (i+1).toString(); 
+       picinfo_one = new picInfo(picname,disc);
+       picsArray37[i] = picinfo_one;
+            	    
+    }
+    casesInfo[37] = new caseInfo(4,picsArray37,"fandong/xiaochunZuopin/ZhongLiangXiangyun/","中粮祥云公区样板房");
+	
+	var picsArray38 = new Array();
+    for(i=0;i<18;i++)
+    {
+	    
+       var picname = (i+1).toString() + ".jpg";
+       var disc = "实景图" + (i+1).toString(); 
+       picinfo_one = new picInfo(picname,disc);
+       picsArray38[i] = picinfo_one;
+            	    
+    }
+    casesInfo[38] = new caseInfo(18,picsArray38,"fandong/xiaochunZuopin/YangbanFang/","东岸样板房");
 }
 
 
@@ -280,5 +519,5 @@ function initDesigners()
 {
 	designerInfoArray[0] = new designerInfo("fandong/tangxiZuopin/",6);
 	designerInfoArray[1] = new designerInfo("fandong/fandongZuopin/",9);
-	designerInfoArray[2] = new designerInfo("fandong/xiaochunZuopin/",4);
+	designerInfoArray[2] = new designerInfo("fandong/xiaochunZuopin/",24);
 }
