@@ -263,7 +263,7 @@ a{
    padding-top:10px;
    color:#696969;
    text-align:center;
-   overflow:scroll;
+   overflow:hidden;
 }
 #caseshow_title
 {
