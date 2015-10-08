@@ -5,7 +5,7 @@ $(document).ready(function(){
 //	$("#div_top").height(80);
 	$("body").width($(document).innerWidth());
 //        $("#div_body").height(400);
-	$("#div_body").height(900);
+	$("#div_body").height(1400);
 //	$("#div_buttom").height($(document).innerHeight()*0.1);
 //alert("doc ready");
         $("rect").css("fill-opacity","0.1");
