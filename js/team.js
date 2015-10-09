@@ -2,12 +2,15 @@
 
 function photoMouseOver()
 {
-	alert($(this).css("width"));
+	//alert($(this).children(".filter_photo"));
+	$(this).children(".filter_photo").css("visibility","visible");
+	
+	//
 }
 
 function photoMouseOut()
 {
-	//alert(this);
+	$(this).children(".filter_photo").css("visibility","hidden");
 }
 
 $(document).ready(function(){
@@ -38,6 +41,7 @@ $(document).ready(function(){
 	img_photo.addClass("photo");
 	
 	var div_filter = $("<div></div>");
+	div_filter.attr("class","filter_photo");
 	div_filter.addClass("filter_photo");
 	
 	div_designer_photo.append(img_photo,div_filter);

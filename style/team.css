@@ -311,12 +311,12 @@ a{
     height:268px;
     position:relative;
    // z-index:2;
-  //  top:-272px;
+    top:-271px;
     //left:9px;
     background-color:gray;
-    //opacity:0.5;
+    opacity:0.5;
     color:white;
-    //visibility:hidden;
+    visibility:hidden;
 
 }
 
