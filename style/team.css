@@ -236,6 +236,14 @@ a{
 	background:url("../fandong/fandongZuopin/fandong_photo.jpg");
 }
 
+.photo
+{
+	width:222px;
+	height:268px;
+	//background:url("../fandong/fandongZuopin/fandong_photo.jpg");
+}
+
+
 #designer1 a #short_case1
 {
      background:url("../fandong/fandongZuopin/short1.jpg");
@@ -302,13 +310,13 @@ a{
     width:222px;
     height:268px;
     position:relative;
-    z-index:2;
-    top:-272px;
+   // z-index:2;
+  //  top:-272px;
     //left:9px;
     background-color:gray;
-    opacity:0.5;
+    //opacity:0.5;
     color:white;
-    visibility:hidden;
+    //visibility:hidden;
 
 }
 
@@ -318,6 +326,16 @@ a{
 	width:222px;
 	height:268px;
 	overflow:hidden;
+	margin-top:5px;
+	margin-left:8px;
+}
+
+.photo_div
+{
+	float:left;
+	width:222px;
+	height:268px;
+	//overflow:hidden;
 	margin-top:5px;
 	margin-left:8px;
 }
