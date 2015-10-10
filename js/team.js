@@ -1,4 +1,19 @@
+var startIndexs = new Array();
 
+
+var designerPhotos = new Array(
+"fandong/fandongZuopin/photo.jpg",
+"fandong/tangxiZuopin/photo.jpg",
+"fandong/xiaochunZuopin/photo.jpg"
+);
+
+function setStartIndexs()
+{
+	initDesigners();
+	startIndexs[0] = designerInfoArray[0].numCases;
+	startIndexs[1] = 0;
+	startIndexs[2] = designerInfoArray[0].numCases + designerInfoArray[1].numCases;
+}
 
 function photoMouseOver()
 {
@@ -11,6 +26,16 @@ function photoMouseOver()
 function photoMouseOut()
 {
 	$(this).children(".filter_photo").css("visibility","hidden");
+}
+
+function shortcaseFilterMouseOver()
+{
+	$(this).children(".filter_shortcase").css("visibility","visible");
+}
+
+function shortcaseFilterMouseOut()
+{
+	$(this).children(".filter_shortcase").css("visibility","hidden");
 }
 
 $(document).ready(function(){
@@ -26,8 +51,15 @@ $(document).ready(function(){
 
 	$("#designer_blocks").empty();
 	
+	initCasesInfo();
+	setStartIndexs();
+	
+	var i = 0;
+	for(i=0;i<3;i++)
+	{
 	var div_designer =$("<div></div>");	
-    div_designer.attr("id","designer1"); //--   	
+	var idDesigner = "designer" + (i+1).toString();
+    div_designer.attr("id",idDesigner); //--   	
 	div_designer.addClass("designer_block");
 	
 	var div_designer_photo = $("<div></div>");	
@@ -37,7 +69,7 @@ $(document).ready(function(){
 	div_designer_photo.bind("mouseout",photoMouseOut);
 	
 	var img_photo = $("<img/>");
-	img_photo.attr("src","fandong/fandongZuopin/photo.jpg");
+	img_photo.attr("src",designerPhotos[i]);//---
 	img_photo.addClass("photo");
 	
 	var div_filter = $("<div></div>");
@@ -48,8 +80,50 @@ $(document).ready(function(){
 	div_designer.append(div_designer_photo);
 	$("#designer_blocks").append(div_designer);
 	
+	var i1 = 0;
+	for(i1=0;i1<4;i1++)
+	{
+		var link_case1 = $("<a></a>");
+	    link_case1.addClass("pic_link");
+	    var hrefCase1 = "Cases.html?id=" + (startIndexs[i] + i1).toString();
+	    link_case1.attr("href",hrefCase1);
+	    link_case1.bind("mouseover",shortcaseFilterMouseOver);
+	    link_case1.bind("mouseout",shortcaseFilterMouseOut);
+	
+	    var imgCase1 = $("<img/>");
+	    imgCase1.addClass("shortCase");
+	    var imgSrc = casesInfo[startIndexs[i] + i1].pathname + casesInfo[startIndexs[i] + i1].pics[0].pic;
+	    imgCase1.attr("src",imgSrc);
+	
+	    var divShortcaseFilter = $("<div></div>");
+	    divShortcaseFilter.attr("class","filter_shortcase");
+	    divShortcaseFilter.addClass("filter_shortcase");
+	
+	    var pFilterText = $("<p></p>").text(casesInfo[startIndexs[i] + i1].caseDesp);
+	    pFilterText.addClass("ptext");
+	
+	    divShortcaseFilter.append(pFilterText);
+	    link_case1.append(imgCase1,divShortcaseFilter);
+	    div_designer.append(link_case1);
+	}
+	var divPosition = $("<div></div>");
+	divPosition.addClass("designer_position");
+	
+	var pPosition = $("<p></p>");
+	pPosition.append(designerNames[i],$("<br/>"),designerPositions[i]);
 	
 	
+	var divZuoPin = $("<div></div>");
+	divZuoPin.addClass("designer_position");
+	
+	var pZuoPinTitle = $("<p></p>").text("×÷Æ·");
+	pZuoPinTitle.css("font-weight","bold");
+    
+    divZuoPin.append(pZuoPinTitle,designerZuoPin[i]);	
+	divPosition.append(pPosition);
+	
+	div_designer.append(divPosition,divZuoPin);
+	}
 	$(".pic_link svg rect").mouseover(
         function (event) {
 		    //  alert(event.target);

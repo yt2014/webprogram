@@ -6,6 +6,14 @@ var currentPictureIndex = 0;
 
 var designerInfoArray = new Array();
 
+var designerPositions = new Array("设计总监","首席设计师","首席设计师");
+var designerNames = new Array("范东","唐希","肖春");
+var designerZuoPin = new Array(
+    "保利198、长城半岛.城邦、三利宅院、蜀郡、华侨城、华润.翡翠城，华润.凤凰城、北欧知识城、眉山九和商场、丹巴海鲜酒楼。。。",
+	"中江售楼部、中粮祥云、奶茶店、鄂尔多斯酒吧、杭州MIUMIU酒吧、阆中售楼部",
+	"特拉克斯甲级写字楼、青羊工业发展园国投总部、西郡英华售楼部及样板房、罗曼海鲜自助餐厅、明宇国际社区售楼部、圣源置业阆城一品样板房、华侨城四期高层样板房、华侨城五期公共空间"
+);
+
 function designerInfo(pathfolder,numCases)
 {
    this.pathfolder = pathfolder;
