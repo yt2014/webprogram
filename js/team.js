@@ -47,9 +47,12 @@ $(document).ready(function(){
 	$("#div_body").height(1400);
 //	$("#div_buttom").height($(document).innerHeight()*0.1);
 //alert("doc ready");
-    $("#left_column").width(($(document).innerWidth()-800)/2);
-	$("#body_middle").width(800);
-	$("#body_right").width(($(document).innerWidth()-800)/2);
+    if(($(document).innerWidth()*0.7)<800)
+	{
+       $("#left_column").width(($(document).innerWidth()-800)/2);
+	   $("#body_middle").width(800);
+	   $("#body_right").width(($(document).innerWidth()-800)/2);
+	}
     $("rect").css("fill-opacity","0.1");
 
 	$("#designer_blocks").empty();
